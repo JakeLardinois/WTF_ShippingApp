@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DeleteOldestItemUnitWeightHistory" xml:space="preserve">
+    <value>DELETE FROM ItemUnitWeightHistory 
+WHERE item = '~p0' AND RecordedTimestamp = (SELECT MIN(RecordedTimestamp) FROM ItemUnitWeightHistory WHERE item = '~p0')</value>
+  </data>
+  <data name="GetItemAvgUnitWeightAndCount" xml:space="preserve">
+    <value>SELECT ISNULL(AVG(UnitWeight), 0), COUNT(UnitWeight) 
+FROM ItemUnitWeightHistory 
+WHERE Item = '~p0'</value>
+  </data>
+  <data name="GetNextSequenceNumber" xml:space="preserve">
+    <value>SELECT NextSequence, GUID From TableSequence 
+	WHERE (TableName = '~p0')</value>
+  </data>
+  <data name="InsertIntoJobTran" xml:space="preserve">
+    <value>INSERT INTO jobtran(job, suffix, trans_type, trans_date, qty_complete, oper_num, qty_moved, whse, loc, trans_class, wc, user_code, complete_op, close_job, next_oper, qty_scrapped)
+	Values('~p0', ~p1, '~p2', '~p3', ~p4, ~p5, ~p6, '~p7', '~p8', '~p9', '~p10', '~p11', ~p12, ~p13, ~p14, 0)</value>
+  </data>
+  <data name="InsertIntoRecievedItemAccumulator" xml:space="preserve">
+    <value>INSERT INTO ReceivedItemAccumulator 
+	(item, job, JobOrderNumber, TotalQuantity) VALUES ('~p0', '~p1', '~p2', ~p3)</value>
+  </data>
+  <data name="InsertIntoRecievedItemHistory" xml:space="preserve">
+    <value>INSERT INTO ReceivedItemHistory(job, item, quantity, operator, GrossWgt, LabelSequence, co, PalletCt, suffix)
+	VALUES ('~p0', '~p1', ~p2, '~p3', ~p4, ~p5, '~p6', ~p7, ~p8)</value>
+  </data>
+  <data name="InsertNewItemUnitWeightHistory" xml:space="preserve">
+    <value>INSERT INTO ItemUnitWeightHistory(item, UnitWeight, Quantity) VALUES ('~p0', '~p1', '~p2')</value>
+  </data>
+  <data name="Rpt_PurchaseRequirementsSp" xml:space="preserve">
+    <value />
+    <comment>I used the command "GRANT EXECUTE ON [WTF_App].[dbo].[Rpt_PurchaseRequirementsSp] TO WTFApp" to grant the execute priveleges required for the stored procedure Rpt_PurchaseRequirementsSp
+"REVOKE EXECUTE ON [WTF_App].[dbo].[Rpt_PurchaseRequirementsSp] TO WTFApp" is the SQL to remove the privelege.</comment>
+  </data>
+  <data name="SelectAllItemHistory" xml:space="preserve">
+    <value>SELECT LabelSequence, item, job, co, Quantity, ReceivedTimestamp, ShippedTimestamp, operator, GrossWgt, PalletCt, ReceivedItemID, suffix 
+	FROM ReceivedItemHistory 
+	WHERE Item = '~p0' ~p1
+	ORDER BY LabelSequence ASC</value>
+  </data>
+  <data name="SelectCustomerAddresses" xml:space="preserve">
+    <value>SELECT cust_num, Name, Addr##1, Addr##2, Addr##3, Addr##4, City, State, ZIP, Country
+	FROM CustAddr
+	WHERE cust_num = ~p0
+	ORDER BY cust_seq</value>
+  </data>
+  <data name="SelectCustomerLabels" xml:space="preserve">
+    <value>SELECT [cust-num], CustomerLabelID, Description, LabelFile, AddrLineCt, SupplierNumber, Sequence
+	FROM CustomerLabel
+	WHERE [cust-num] = 0 OR [cust-num] = ~p0
+	ORDER BY [cust-num] desc, Sequence ASC, description ASC</value>
+  </data>
+  <data name="SelectItemAccumulatorAvailableInventory" xml:space="preserve">
+    <value>SELECT SUM(TotalQuantity) FROM ReceivedItemAccumulator
+	WHERE item = '~p0'</value>
+  </data>
+  <data name="SelectItemBlanketJobs" xml:space="preserve">
+    <value>SELECT job.job, co.co_num, coitem.co_release, job.qty_released, job.qty_complete, item.description, 
+item.u_m, co.cust_po, job.ord_release, job.ord_num, itemwhse.qty_on_hand, co_bln.cust_item, custaddr.name, 
+co.cust_num, shipcode.description AS ShipCodeDescription, 
+terms.description AS Terms, item.drawing_nbr, coitem.due_date
+FROM co_bln
+INNER JOIN item ON co_bln.item = item.item
+INNER JOIN coitem ON co_bln.item = coitem.item AND coitem.co_num = co_bln.co_num
+INNER JOIN job ON co_bln.item = job.item
+INNER JOIN co ON co_bln.co_num = co.co_num
+INNER JOIN customer ON co.cust_num = customer.cust_num AND co.cust_seq = customer.cust_seq
+INNER JOIN custaddr ON customer.cust_seq = custaddr.cust_seq AND customer.cust_num = custaddr.cust_num
+INNER JOIN itemwhse ON co_bln.item = itemwhse.item
+INNER JOIN shipcode ON co.ship_code = shipcode.ship_code 
+INNER JOIN terms ON co.terms_code = terms.terms_code 
+WHERE (job.type='J') AND (co_bln.item='~p0') 
+AND (itemwhse.whse='MAIN') 
+AND (RTRIM(LTRIM(co_bln.co_num)) ='~p1')
+AND (job.stat='R') AND (co.type='B')</value>
+  </data>
+  <data name="SelectItemJobs" xml:space="preserve">
+    <value>SELECT job.job, job.ord_num, co.co_num, coitem.co_line, coitem.co_release, 
+job.qty_released, coitem.qty_ordered, coitem.qty_shipped, 
+coitem.qty_ready, co.cust_po, coitem.ship_date, 
+coitem.due_date, coitem.cust_item, custaddr.name, 
+shipcode.description AS ShipCodeDescription, terms.description AS Terms, item.drawing_nbr, 
+co.slsman, item.description, item.revision, co.cust_num, itemwhse.qty_on_hand
+FROM co INNER JOIN coitem ON co.co_num = coitem.co_num
+INNER JOIN item ON coitem.item = item.item
+INNER JOIN itemwhse ON coitem.item = itemwhse.item
+INNER JOIN job ON co.co_num = job.ord_num AND item.item = job.item AND coitem.co_release = job.ord_release AND coitem.ref_num = job.job
+INNER JOIN shipcode ON co.ship_code = shipcode.ship_code 
+INNER JOIN terms ON co.terms_code = terms.terms_code 
+INNER JOIN customer ON co.cust_num = customer.cust_num AND co.cust_seq = customer.cust_seq
+INNER JOIN custaddr ON customer.cust_seq = custaddr.cust_seq AND customer.cust_num = custaddr.cust_num
+WHERE coitem.item='~p0'
+AND job.type='J' AND (job.stat = 'R' OR job.stat ='F')
+AND co.stat='O' 
+AND (coitem.stat='O' OR coitem.stat='F')
+ORDER BY job.job, coitem.co_line</value>
+  </data>
+  <data name="SelectItemJobsFromInventory" xml:space="preserve">
+    <value>SELECT job, TotalQuantity, JobOrderNumber, LastUpdate, ReceivedItemAccumulatorID, suffix
+FROM ReceivedItemAccumulator
+WHERE item = '~p0'
+AND TotalQuantity ~p1</value>
+  </data>
+  <data name="SelectItemStockRoomLocations" xml:space="preserve">
+    <value>SELECT whse, item, rank, loc, loc_type
+	FROM itemloc
+	WHERE whse = '~p0' AND item = '~p1' AND loc_type = 'S'
+	ORDER BY rank ASC</value>
+  </data>
+  <data name="SelectJobOperations" xml:space="preserve">
+    <value>SELECT oper_num, wc, qty_complete, qty_scrapped, qty_moved, complete AS Status
+	FROM jobroute
+	WHERE suffix = 0 AND job = '~p0'
+	ORDER BY oper_num ~p1</value>
+  </data>
+  <data name="SelectLastRecievedItemHistoryDate" xml:space="preserve">
+    <value>SELECT MAX(ReceivedTimestamp) FROM ReceivedItemHistory
+	WHERE item = '~p0'</value>
+  </data>
+  <data name="SelectLastShippedItemHistoryDate" xml:space="preserve">
+    <value>SELECT MAX(ShippedTimestamp) FROM ReceivedItemHistory 
+	WHERE item = '~p0'</value>
+  </data>
+  <data name="SelectMFGItemJobs" xml:space="preserve">
+    <value>SELECT job.job, job.suffix, job.qty_released, job.qty_complete, item.description, item.u_m, job.ord_release, job.ord_num, itemwhse.qty_on_hand, item.drawing_nbr
+FROM item INNER JOIN job ON item.item = job.item 
+INNER JOIN itemwhse ON item.item = itemwhse.item
+WHERE job.type='J' AND item.item='~p0' AND (job.stat = 'R' OR job.stat = 'F')
+AND itemwhse.whse ='MAIN' ORDER BY job.job</value>
+  </data>
+  <data name="SelectMFGItemOrderLines" xml:space="preserve">
+    <value>SELECT 
+ co.co_num
+,co.cust_num
+,coitem.co_line
+,coitem.co_release
+,coitem.qty_ordered
+,coitem.qty_shipped
+,co.cust_po
+,co.slsman
+,item.item
+,item.drawing_nbr
+,item.description AS ItemDescription
+,item.revision
+,coitem.qty_ready
+,coitem.ship_date
+,coitem.due_date
+,coitem.promise_date
+,coitem.cust_item
+,custaddr.name
+,shipcode.description AS ShipCodeDescription
+,terms.description AS TermsDescription
+,co.stat AS OrderStatus
+,coitem.stat
+FROM co INNER JOIN coitem ON co.co_num = coitem.co_num
+INNER JOIN item ON coitem.item = item.item 
+INNER JOIN terms ON co.terms_code = terms.terms_code 
+INNER JOIN customer ON co.cust_num = customer.cust_num AND co.cust_seq = customer.cust_seq
+INNER JOIN custaddr ON customer.cust_seq = custaddr.cust_seq AND customer.cust_num = custaddr.cust_num
+LEFT JOIN shipcode ON co.ship_code = shipcode.ship_code
+WHERE coitem.item = '~p0'
+AND co.stat='O' 
+AND (coitem.stat='O' OR coitem.stat='F')
+AND (RTRIM(LTRIM(co.co_num))) = '~p1'
+ORDER BY coitem.co_line</value>
+  </data>
+  <data name="SelectMFGItemOrderLinesFilled" xml:space="preserve">
+    <value>SELECT 
+ co.co_num
+,co.cust_num
+,coitem.co_line
+,coitem.co_release
+,coitem.qty_ordered
+,coitem.qty_shipped
+,co.cust_po
+,co.slsman
+,item.item
+,item.drawing_nbr
+,item.description AS ItemDescription
+,item.revision
+,coitem.qty_ready
+,coitem.ship_date
+,coitem.promise_date
+,coitem.due_date
+,coitem.cust_item
+,custaddr.name
+,shipcode.description AS ShipCodeDescription
+,terms.description AS TermsDescription
+,co.stat AS OrderStatus
+,coitem.stat
+FROM co INNER JOIN coitem ON co.co_num = coitem.co_num
+INNER JOIN item ON coitem.item = item.item 
+INNER JOIN terms ON co.terms_code = terms.terms_code 
+INNER JOIN customer ON co.cust_num = customer.cust_num AND co.cust_seq = customer.cust_seq
+INNER JOIN custaddr ON customer.cust_seq = custaddr.cust_seq AND customer.cust_num = custaddr.cust_num
+LEFT JOIN shipcode ON co.ship_code = shipcode.ship_code
+WHERE coitem.item = '~p0'
+AND ((co.stat='C' AND (coitem.stat='O' OR coitem.stat='F' OR coitem.stat='C'))
+ OR (co.stat = 'O' AND coitem.stat = 'F'))
+AND (RTRIM(LTRIM(co.co_num))) = '~p1'</value>
+    <comment>I had a problem with this query not returning any values.  The root cause was that the "Ship Via"field in SL needed to be populated.  I wasn't sure why, since this was an inner join...  UPDATE - I noticed on another query that using a left join was what allowed the query to work.</comment>
+  </data>
+  <data name="SelectMFGItemOrders" xml:space="preserve">
+    <value>SELECT DISTINCT co.co_num, co.type, coitem.co_line, co.cust_po, coitem.cust_item, co.cust_num, custaddr.name, co.order_date, co.cust_seq
+FROM co 
+INNER JOIN coitem ON co.co_num = coitem.co_num 
+INNER JOIN customer ON co.cust_num = customer.cust_num AND co.cust_seq = customer.cust_seq
+INNER JOIN custaddr ON customer.cust_seq = custaddr.cust_seq AND customer.cust_num = custaddr.cust_num
+WHERE coitem.item = '~p0' 
+AND co.stat='O' AND coitem.stat='O'</value>
+  </data>
+  <data name="SelectMFGItemOrdersFilled" xml:space="preserve">
+    <value>SELECT DISTINCT co.co_num, co.type, coitem.co_line, co.cust_po, coitem.cust_item, co.cust_num, custaddr.name, co.order_date, co.cust_seq
+FROM co 
+INNER JOIN coitem ON co.co_num = coitem.co_num 
+INNER JOIN customer ON co.cust_num = customer.cust_num AND co.cust_seq = customer.cust_seq
+INNER JOIN custaddr ON customer.cust_seq = custaddr.cust_seq AND customer.cust_num = custaddr.cust_num
+WHERE coitem.item = '~p0' 
+AND (co.stat='O' OR co.stat='C')
+ORDER BY co.co_num, coitem.co_line</value>
+  </data>
+  <data name="SelectNotesByGUID" xml:space="preserve">
+    <value>SELECT Description, Note, IsSpecificNote, TableName, RefRowPointer, IsInternalNote
+FROM ReportNotesView
+WHERE RefRowPointer = '~p0'</value>
+  </data>
+  <data name="SelectOrderOrderLines" xml:space="preserve">
+    <value>SELECT 
+ co.co_num
+,co.contact
+,co.cust_num
+,coitem.co_line
+,coitem.co_release
+,coitem.qty_ordered
+,coitem.qty_shipped
+,co.cust_po
+,co.slsman
+,item.item
+,item.drawing_nbr
+,item.description AS ItemDescription
+,item.revision
+,coitem.qty_ready
+,coitem.ship_date
+,coitem.promise_date
+,coitem.due_date
+,coitem.cust_item
+,custaddr.name
+,shipcode.description AS ShipCodeDescription
+,terms.description AS TermsDescription
+,co.stat AS OrderStatus
+,coitem.stat
+,item.u_m
+,coitem.RowPointer AS RegularLineRowPointer, co_bln.RowPointer AS BlanketLineRowPointer
+FROM co INNER JOIN coitem ON co.co_num = coitem.co_num
+INNER JOIN item ON coitem.item = item.item 
+INNER JOIN terms ON co.terms_code = terms.terms_code 
+INNER JOIN customer ON co.cust_num = customer.cust_num AND co.cust_seq = customer.cust_seq
+INNER JOIN custaddr ON customer.cust_seq = custaddr.cust_seq AND customer.cust_num = custaddr.cust_num
+LEFT JOIN co_bln ON coitem.co_num = co_bln.co_num AND coitem.co_line = co_bln.co_line
+LEFT JOIN shipcode ON co.ship_code = shipcode.ship_code
+WHERE co.stat='O' 
+AND (coitem.stat='O' OR coitem.stat='F')
+AND (RTRIM(LTRIM(co.co_num))) = '~p0'
+ORDER BY coitem.co_line</value>
+    <comment>I added the CO.Promise date Co.ShipDate only tells when the last batch was shipped.</comment>
+  </data>
+  <data name="SelectRecievedAccumulatorID" xml:space="preserve">
+    <value>SELECT ReceivedItemAccumulatorID, JobOrderNumber
+	FROM ReceivedItemAccumulator 
+	WHERE item = '~p0' AND job = '~p1'AND suffix = ~p2</value>
+  </data>
+  <data name="SelectRecievedItemHistory" xml:space="preserve">
+    <value>SELECT LabelSequence, item, job, co, Quantity, ReceivedTimestamp, ShippedTimestamp, operator, GrossWgt, PalletCt, ReceivedItemID, suffix
+	FROM ReceivedItemHistory 
+	WHERE Item = '~p0' ~p1
+	AND ShippedTimestamp IS NULL
+	ORDER BY LabelSequence ASC</value>
+  </data>
+  <data name="SelectSetting" xml:space="preserve">
+    <value>SELECT Setting
+	FROM Settings
+	WHERE KeyName = '~p0'</value>
+  </data>
+  <data name="SelectShippedItemHistory" xml:space="preserve">
+    <value>SELECT LabelSequence, item, job, co, Quantity, ReceivedTimestamp, ShippedTimestamp, operator, GrossWgt, PalletCt, ReceivedItemID, suffix
+	FROM ReceivedItemHistory 
+	WHERE Item = '~p0' ~p1
+	AND ShippedTimestamp IS NOT NULL
+	ORDER BY LabelSequence ASC</value>
+  </data>
+  <data name="SelectShippingCarriers" xml:space="preserve">
+    <value>SELECT ShipCarriersID, CarrierDesc 
+	FROM ShipCarriers 
+	ORDER BY CarrierDesc</value>
+  </data>
+  <data name="SelectShippingClassifications" xml:space="preserve">
+    <value>SELECT ItemRef, ItemDesc + ' ' + ItemNo + ' ' + Class AS Classification 
+	FROM ShipClassification 
+	ORDER BY ItemRef</value>
+  </data>
+  <data name="SelectStockRoomLocations" xml:space="preserve">
+    <value>SELECT loc, description, loc_type
+	FROM location</value>
+  </data>
+  <data name="SelectTopNCustomerAddresses" xml:space="preserve">
+    <value>SELECT TOP ~p0 cust_num, Name, Addr##1, Addr##2, Addr##3, Addr##4, City, State, ZIP, Country
+	FROM CustAddr
+	WHERE ~p1 Like '%~p2%'
+	ORDER BY ~p3</value>
+  </data>
+  <data name="SelectTopNItems" xml:space="preserve">
+    <value>SELECT TOP ~p0 item.[item], item.[description], item.revision, item.drawing_nbr, itemwhse.qty_on_hand
+	FROM item INNER JOIN itemwhse ON item.item = itemwhse.item
+	WHERE ~p1 LIKE '~p2%'
+	ORDER BY ~p3</value>
+    <comment>UPDATED 4-11-13 So that LIKE used '~p2%' instead of '%~p2%'; otherwise I couldn't do a lookup on item 4935</comment>
+  </data>
+  <data name="SelectTopNOrders" xml:space="preserve">
+    <value>SELECT TOP ~p0 co.co_num, co.type, co.cust_po, co.cust_num, custaddr.name, co.order_date, co.decifld1, co.RowPointer, co.cust_seq
+FROM co 
+INNER JOIN customer ON co.cust_num = customer.cust_num AND co.cust_seq = customer.cust_seq
+INNER JOIN custaddr ON customer.cust_seq = custaddr.cust_seq AND customer.cust_num = custaddr.cust_num
+WHERE LTRIM(RTRIM(~p1)) LIKE '%~p2%'
+AND (co.stat='O' OR co.stat='C')
+ORDER BY ~p3</value>
+  </data>
+  <data name="SelectTopNVendorAddresses" xml:space="preserve">
+    <value>SELECT TOP ~p0 vend_num, Name, Addr##1, Addr##2, Addr##3, Addr##4, City, State, ZIP, Country
+	FROM VendAddr
+	WHERE ~p1 Like '%~p2%'
+	ORDER BY ~p3</value>
+  </data>
+  <data name="UpdateNextSequenceNumber" xml:space="preserve">
+    <value>UPDATE TableSequence
+	SET NextSequence = ~p0, GUID = '~p1' 
+	WHERE TableName = '~p2' AND GUID = '~p3'</value>
+  </data>
+  <data name="UpdatePackingSlipPrintSequence" xml:space="preserve">
+    <value>UPDATE co 
+SET decifld1 = decifld1 + 1 
+WHERE LTRIM(RTRIM(co_num)) = '~p0'</value>
+  </data>
+  <data name="UpdateRecievedItemAccumulator" xml:space="preserve">
+    <value>UPDATE ReceivedItemAccumulator
+	SET TotalQuantity = TotalQuantity ~p0, LastUpdate = '~p1', JobOrderNumber= '~p2'
+	WHERE ReceivedItemAccumulatorID = ~p3</value>
+  </data>
+  <data name="UpdateRecievedItemHistory" xml:space="preserve">
+    <value>UPDATE ReceivedItemHistory
+	SET ShippedTimestamp = '~p0'
+	WHERE ReceivedItemID = ~p1</value>
+  </data>
+</root>

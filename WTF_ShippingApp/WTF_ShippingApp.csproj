@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{88213540-55A5-4190-9AF3-39E72EDF312B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WTF_ShippingApp</RootNamespace>
+    <AssemblyName>SL8ShippingApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\wiretechfab.com\CompanyFolders\Access\Deploy\SL8Shipping\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <PublisherName>WireTech Fabricators, Inc.</PublisherName>
+    <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
+    <WebPage>publish.htm</WebPage>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>82</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A8341B71D9CDF80961039F51ABBED8A24A916816</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>TRFFC17.ICO</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Seagull.BarTender.Print, Version=10.0.4.1, Culture=neutral, PublicKeyToken=109ff779a1b4cbc7, processorArchitecture=x86" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmCustomerLabels.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomerLabels.Designer.cs">
+      <DependentUpon>frmCustomerLabels.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmManageItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmManageItems.Designer.cs">
+      <DependentUpon>frmManageItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectPrinter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectPrinter.Designer.cs">
+      <DependentUpon>frmSelectPrinter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSettings.Designer.cs">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShipCarriers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShipCarriers.Designer.cs">
+      <DependentUpon>frmShipCarriers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShipClassifications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShipClassifications.Designer.cs">
+      <DependentUpon>frmShipClassifications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPurchaseRequirements.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPurchaseRequirements.Designer.cs">
+      <DependentUpon>frmPurchaseRequirements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTimePhasedInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimePhasedInventory.Designer.cs">
+      <DependentUpon>frmTimePhasedInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVendors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVendors.Designer.cs">
+      <DependentUpon>frmVendors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControls.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmPackingSlip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPackingSlip.Designer.cs">
+      <DependentUpon>frmPackingSlip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBillOfLadingReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBillOfLadingReport.Designer.cs">
+      <DependentUpon>frmBillOfLadingReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBOL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBOL.Designer.cs">
+      <DependentUpon>frmBOL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmConfirmRecieveitem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmConfirmRecieveitem.Designer.cs">
+      <DependentUpon>frmConfirmRecieveitem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCustomers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCustomers.Designer.cs">
+      <DependentUpon>frmCustomers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmItemHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmItemHistory.Designer.cs">
+      <DependentUpon>frmItemHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmItemHistoryReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmItemHistoryReport.Designer.cs">
+      <DependentUpon>frmItemHistoryReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmItems.Designer.cs">
+      <DependentUpon>frmItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPackingSlipReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPackingSlipReport.Designer.cs">
+      <DependentUpon>frmPackingSlipReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPrintLabel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrintLabel.Designer.cs">
+      <DependentUpon>frmPrintLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuickLabelPrinter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuickLabelPrinter.Designer.cs">
+      <DependentUpon>frmQuickLabelPrinter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectItemJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectItemJob.Designer.cs">
+      <DependentUpon>frmSelectItemJob.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectItemJobFromInventory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectItemJobFromInventory.Designer.cs">
+      <DependentUpon>frmSelectItemJobFromInventory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectOperation.Designer.cs">
+      <DependentUpon>frmSelectOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectOrder.Designer.cs">
+      <DependentUpon>frmSelectOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSelectOrderLine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSelectOrderLine.Designer.cs">
+      <DependentUpon>frmSelectOrderLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShipItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShipItem.Designer.cs">
+      <DependentUpon>frmShipItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShipMultiple.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShipMultiple.Designer.cs">
+      <DependentUpon>frmShipMultiple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmShipping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmShipping.Designer.cs">
+      <DependentUpon>frmShipping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Content Include="TRFFC17.ICO" />
+    <EmbeddedResource Include="frmCustomerLabels.resx">
+      <DependentUpon>frmCustomerLabels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmManageItems.resx">
+      <DependentUpon>frmManageItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectPrinter.resx">
+      <DependentUpon>frmSelectPrinter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSettings.resx">
+      <DependentUpon>frmSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShipCarriers.resx">
+      <DependentUpon>frmShipCarriers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShipClassifications.resx">
+      <DependentUpon>frmShipClassifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPurchaseRequirements.resx">
+      <DependentUpon>frmPurchaseRequirements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTimePhasedInventory.resx">
+      <DependentUpon>frmTimePhasedInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVendors.resx">
+      <DependentUpon>frmVendors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPackingSlip.resx">
+      <DependentUpon>frmPackingSlip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBillOfLadingReport.resx">
+      <DependentUpon>frmBillOfLadingReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBOL.resx">
+      <DependentUpon>frmBOL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmConfirmRecieveitem.resx">
+      <DependentUpon>frmConfirmRecieveitem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCustomers.resx">
+      <DependentUpon>frmCustomers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmItemHistory.resx">
+      <DependentUpon>frmItemHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmItemHistoryReport.resx">
+      <DependentUpon>frmItemHistoryReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmItems.resx">
+      <DependentUpon>frmItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPackingSlipReport.resx">
+      <DependentUpon>frmPackingSlipReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPrintLabel.resx">
+      <DependentUpon>frmPrintLabel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuickLabelPrinter.resx">
+      <DependentUpon>frmQuickLabelPrinter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectItemJob.resx">
+      <DependentUpon>frmSelectItemJob.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectItemJobFromInventory.resx">
+      <DependentUpon>frmSelectItemJobFromInventory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectOperation.resx">
+      <DependentUpon>frmSelectOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectOrder.resx">
+      <DependentUpon>frmSelectOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSelectOrderLine.resx">
+      <DependentUpon>frmSelectOrderLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShipItem.resx">
+      <DependentUpon>frmShipItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShipMultiple.resx">
+      <DependentUpon>frmShipMultiple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmShipping.resx">
+      <DependentUpon>frmShipping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Content Include="ReportTemplates\BillOfLading.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="ReportTemplates\ItemHistory.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="ReportTemplates\PackingSlip.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="ReportTemplates\TimePhasedInventory.rdlc" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <None Include="Properties\DataSources\WTFClassLibrary.CustomerLabel.datasource" />
+    <None Include="Properties\DataSources\WTFClassLibrary.ItemHistoryTransactionList.datasource" />
+    <None Include="Properties\DataSources\WTFClassLibrary.OrderLineList.datasource" />
+    <None Include="Properties\DataSources\WTFClassLibrary.PackingSlip.datasource" />
+    <None Include="Properties\DataSources\WTFClassLibrary.Setting.datasource" />
+    <None Include="Properties\DataSources\WTFClassLibrary.ShipCarrier.datasource" />
+    <None Include="Properties\DataSources\WTFClassLibrary.ShipClassification.datasource" />
+    <None Include="Properties\DataSources\WTFClassLibrary.SL8DbDataContext.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="WTF_ShippingApp_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WTFClassLibrary\WTFClassLibrary.csproj">
+      <Project>{3C41077F-AA5E-44F3-8D90-98B5865F608A}</Project>
+      <Name>WTFClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.ReportViewer.10.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft Visual Studio 2010 Report Viewer</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

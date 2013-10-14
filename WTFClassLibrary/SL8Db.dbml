@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ExtraSytelineTables" Class="SL8DbDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ERPSQLSVR;Initial Catalog=ExtraSytelineTables;Persist Security Info=True;User ID=WTFApp" SettingsObjectName="WTFClassLibrary.Properties.Settings" SettingsPropertyName="ExtraSytelineTablesConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Settings" Member="Settings">
+    <Type Name="Setting">
+      <Column Name="SettingsID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="KeyName" Type="System.String" DbType="VarChar(64) NOT NULL" CanBeNull="false" />
+      <Column Name="Setting" Member="Setting1" Type="System.String" DbType="VarChar(256) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ShipCarriers" Member="ShipCarriers">
+    <Type Name="ShipCarrier">
+      <Column Name="ShipCarriersID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CarrierDesc" Type="System.String" DbType="NVarChar(64) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.ShipClassification" Member="ShipClassifications">
+    <Type Name="ShipClassification">
+      <Column Name="ItemRef" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ItemDesc" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="ItemNo" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="Class" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CustomerLabel" Member="CustomerLabels">
+    <Type Name="CustomerLabel">
+      <Column Name="CustomerLabelID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[cust-num]" Member="cust_num" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LabelFile" Type="System.String" DbType="NVarChar(64)" CanBeNull="true" />
+      <Column Name="description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AddrLineCt" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Sequence" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SupplierNumber" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PurchasedItems" Member="PurchasedItems">
+    <Type Name="PurchasedItem">
+      <Column Name="ItemID" Type="System.String" DbType="NVarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="UnitOfMeasure" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
