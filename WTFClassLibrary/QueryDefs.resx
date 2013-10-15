@@ -176,7 +176,7 @@ WHERE Item = '~p0'</value>
     <value>SELECT job.job, co.co_num, coitem.co_release, job.qty_released, job.qty_complete, item.description, 
 item.u_m, co.cust_po, job.ord_release, job.ord_num, itemwhse.qty_on_hand, co_bln.cust_item, custaddr.name, 
 co.cust_num, shipcode.description AS ShipCodeDescription, 
-terms.description AS Terms, item.drawing_nbr, coitem.due_date
+terms.description AS Terms, item.drawing_nbr, item.charfld1, item.charfld1, coitem.due_date
 FROM co_bln
 INNER JOIN item ON co_bln.item = item.item
 INNER JOIN coitem ON co_bln.item = coitem.item AND coitem.co_num = co_bln.co_num
@@ -197,7 +197,7 @@ AND (job.stat='R') AND (co.type='B')</value>
 job.qty_released, coitem.qty_ordered, coitem.qty_shipped, 
 coitem.qty_ready, co.cust_po, coitem.ship_date, 
 coitem.due_date, coitem.cust_item, custaddr.name, 
-shipcode.description AS ShipCodeDescription, terms.description AS Terms, item.drawing_nbr, 
+shipcode.description AS ShipCodeDescription, terms.description AS Terms, item.drawing_nbr, item.charfld1, 
 co.slsman, item.description, item.revision, co.cust_num, itemwhse.qty_on_hand
 FROM co INNER JOIN coitem ON co.co_num = coitem.co_num
 INNER JOIN item ON coitem.item = item.item
@@ -240,7 +240,7 @@ AND TotalQuantity ~p1</value>
 	WHERE item = '~p0'</value>
   </data>
   <data name="SelectMFGItemJobs" xml:space="preserve">
-    <value>SELECT job.job, job.suffix, job.qty_released, job.qty_complete, item.description, item.u_m, job.ord_release, job.ord_num, itemwhse.qty_on_hand, item.drawing_nbr
+    <value>SELECT job.job, job.suffix, job.qty_released, job.qty_complete, item.description, item.u_m, job.ord_release, job.ord_num, itemwhse.qty_on_hand, item.drawing_nbr, item.charfld1
 FROM item INNER JOIN job ON item.item = job.item 
 INNER JOIN itemwhse ON item.item = itemwhse.item
 WHERE job.type='J' AND item.item='~p0' AND (job.stat = 'R' OR job.stat = 'F')
@@ -258,6 +258,7 @@ AND itemwhse.whse ='MAIN' ORDER BY job.job</value>
 ,co.slsman
 ,item.item
 ,item.drawing_nbr
+,item.charfld1
 ,item.description AS ItemDescription
 ,item.revision
 ,coitem.qty_ready
@@ -294,6 +295,7 @@ ORDER BY coitem.co_line</value>
 ,co.slsman
 ,item.item
 ,item.drawing_nbr
+,item.charfld1
 ,item.description AS ItemDescription
 ,item.revision
 ,coitem.qty_ready
@@ -355,6 +357,7 @@ WHERE RefRowPointer = '~p0'</value>
 ,co.slsman
 ,item.item
 ,item.drawing_nbr
+,item.charfld1
 ,item.description AS ItemDescription
 ,item.revision
 ,coitem.qty_ready
@@ -427,7 +430,7 @@ ORDER BY coitem.co_line</value>
 	ORDER BY ~p3</value>
   </data>
   <data name="SelectTopNItems" xml:space="preserve">
-    <value>SELECT TOP ~p0 item.[item], item.[description], item.revision, item.drawing_nbr, itemwhse.qty_on_hand
+    <value>SELECT TOP ~p0 item.[item], item.[description], item.revision, item.drawing_nbr, item.charfld1, itemwhse.qty_on_hand
 	FROM item INNER JOIN itemwhse ON item.item = itemwhse.item
 	WHERE ~p1 LIKE '~p2%'
 	ORDER BY ~p3</value>

@@ -499,6 +499,9 @@ namespace WTF_ShippingApp
                         case "item.DrawingNmbr":
                             format.SubStrings[objSubString.Name].Value = mobjItem.DrawingNumber.Trim();
                             break;
+                        case "item.ShippingAppItemNo":
+                            format.SubStrings[objSubString.Name].Value = mobjItem.ShippingAppItemNo.Trim();
+                            break;
                         case "item.Revision":
                             format.SubStrings[objSubString.Name].Value = mobjItem.Revision.Trim();
                             break;

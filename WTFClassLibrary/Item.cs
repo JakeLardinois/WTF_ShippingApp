@@ -27,6 +27,7 @@ namespace WTFClassLibrary
         public string CustomerOrderNumber { get; set; }
         public double QtyOnHand { get; set; }
         public string DrawingNumber { get; set; }
+        public string ShippingAppItemNo { get; set; }
         public bool SearchFilledOrders { get; set; }
         public bool IsPulledFromInventory { get; set; }
         public long LabelSequence { get; set; }
@@ -279,6 +280,8 @@ namespace WTFClassLibrary
 
                     objOrderLine.DrawingNumber = objRow["drawing_nbr"].ToString();
 
+                    objOrderLine.ShippingAppItemNo = objRow["charfld1"].ToString();
+
                     objOrderLine.ItemDescription = objRow["ItemDescription"].ToString();
 
                     objOrderLine.ItemRevision = objRow["revision"].ToString();
@@ -335,6 +338,8 @@ namespace WTFClassLibrary
                 QtyOnHand = double.TryParse(objDataTable.Rows[0]["qty_on_hand"].ToString(), out dblTemp) ? dblTemp : 0.0;
 
                 DrawingNumber = objDataTable.Rows[0]["drawing_nbr"].ToString();
+
+                ShippingAppItemNo = objDataTable.Rows[0]["charfld1"].ToString();
 
                 foreach (DataRow objRow in objDataTable.Rows)
                 {
@@ -655,7 +660,9 @@ namespace WTFClassLibrary
                 Description = objDataReader["Description"].ToString();
                 Revision = objDataReader["revision"].ToString();
                 QtyOnHand = double.TryParse(objDataReader["qty_on_hand"].ToString(), out dblTemp) ? dblTemp : 0.0;
-                CustomerItem = objDataReader["drawing_nbr"].ToString();
+                //CustomerItem = objDataReader["drawing_nbr"].ToString();  
+                CustomerItem = objDataReader["charfld1"].ToString(); 
+
                 //IsMFG = ItemID.ToUpper().EndsWith("MFG");
                 IsSubItem = objMFGMatch.Success || objDashIntMatch.Success;//Implemented so isMFG functionality could be utilized for -1, -2, etc items
                 SetAvgUnitWeight();

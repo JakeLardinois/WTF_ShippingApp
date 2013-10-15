@@ -18,6 +18,7 @@ namespace WTFClassLibrary
         public string Salesman { get; set; }
         public string ItemID { get; set; }
         public string DrawingNumber { get; set; }
+        public string ShippingAppItemNo { get; set; }
         public string ItemDescription { get; set; }
         public string ItemRevision { get; set; }
         public int QtyReady { get; set; }

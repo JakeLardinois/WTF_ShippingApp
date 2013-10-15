@@ -112,6 +112,8 @@ namespace WTFClassLibrary
 
                     objOrderLine.DrawingNumber = objRow["drawing_nbr"].ToString();
 
+                    objOrderLine.ShippingAppItemNo = objRow["charfld1"].ToString();
+
                     objOrderLine.ItemDescription = objRow["ItemDescription"].ToString();
 
                     objOrderLine.ItemRevision = objRow["revision"].ToString();
