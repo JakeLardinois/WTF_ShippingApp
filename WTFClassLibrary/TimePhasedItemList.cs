@@ -102,7 +102,7 @@ namespace WTFClassLibrary
 
                         if (query != null)
                         {
-                            objRepletionDepletionItem.WorkCenter = query.Field<string>("RESID");
+                            objRepletionDepletionItem.WorkCenter = query.Field<string>("DerWC");
                             //objRepletionDepletionItem.ItemID = query.Field<string>("PARTID");
                         }
                     }
