@@ -63,7 +63,10 @@ namespace WTF_ShippingApp
 
             try
             {
-                dgvOperations.DataSource = mobjJob.OpenOperations;
+                /*MODIFIED 1/20/2014 As part of the last operation removal project, I removed the functionality where an open operation was required in order to proceed past this point by having the application
+                 pull in the list of operations regardless of wether or not they were open.*/
+                //dgvOperations.DataSource = mobjJob.OpenOperations;
+                dgvOperations.DataSource = mobjJob.Operations;
             }
             catch { }
 

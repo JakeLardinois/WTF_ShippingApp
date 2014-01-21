@@ -134,7 +134,9 @@ namespace WTF_ShippingApp
                 objJobTransaction.QtyComplete = double.Parse(txtQuantity.Text);
                 objJobTransaction.NextOperation = mobjItem.SelectedJob.SelectedOperation.NextOperation;
 
-                objJobTransaction.Insert();
+                /*MODIFIED 1/20/2014 - As part of the last operation removal project I removed the functionality where a move transaction is inserted into the unposted job transactions table for posting
+                 since quantities that the operator enters are the quantitites that will go into inventory.*/
+                //objJobTransaction.Insert();
 
                 if (mobjItem.IsPulledFromInventory)
                     foreach (ItemHistoryTransaction objTransaction in mobjItem.SelectedHistoryTransactions)

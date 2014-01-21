@@ -82,6 +82,7 @@
             this.GroupBox1.Size = new System.Drawing.Size(184, 64);
             this.GroupBox1.TabIndex = 55;
             this.GroupBox1.TabStop = false;
+            this.GroupBox1.Visible = false;
             // 
             // chkCloseJob
             // 
