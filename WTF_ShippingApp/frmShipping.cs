@@ -558,5 +558,15 @@ namespace WTF_ShippingApp
             if (dblPieceWeight > 0.0)
                 txtQuantity.Text = Math.Ceiling((dblGrossWeight - dblTareWeight) / dblPieceWeight).ToString();// ("#,##0.####");
         }
+
+        private void btnWrongCount_Click(object sender, EventArgs e)
+        {
+            if (mobjItem != null)
+            {
+                mobjItem.AddWrongCount();
+                MessageBox.Show("A Wrong Count has been Recorded...", "Wrong Count", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+                
+        }
     }
 }

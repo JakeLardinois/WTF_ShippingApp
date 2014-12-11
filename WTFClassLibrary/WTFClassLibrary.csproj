@@ -32,11 +32,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -50,6 +56,21 @@
     <Compile Include="ComboBoxItem.cs" />
     <Compile Include="CustomerAddress.cs" />
     <Compile Include="Enums.cs" />
+    <Compile Include="ExtraSytelineTables.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExtraSytelineTables.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExtraSytelineTables.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExtraSytelineTables.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ExtraSytelineTables.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExtraSytelineTables.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Item.cs" />
     <Compile Include="ItemHistoryJob.cs" />
     <Compile Include="ItemHistoryTransaction.cs" />
@@ -85,21 +106,44 @@
       <DependentUpon>SL8Db.dbml</DependentUpon>
     </Compile>
     <Compile Include="SL8Db.designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
       <DependentUpon>SL8Db.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="SortableBindingList.cs" />
     <Compile Include="SortableSearchableBindingList.cs" />
     <Compile Include="StockLocation.cs" />
     <Compile Include="TimePhasedItemList.cs" />
     <Compile Include="VendorAddress.cs" />
+    <Compile Include="WrongCount.cs">
+      <DependentUpon>ExtraSytelineTables.tt</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <EntityDeploy Include="ExtraSytelineTables.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ExtraSytelineTables.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ExtraSytelineTables.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ExtraSytelineTables.edmx</DependentUpon>
+      <LastGenOutput>ExtraSytelineTables.Context.cs</LastGenOutput>
+    </None>
+    <None Include="ExtraSytelineTables.edmx.diagram">
+      <DependentUpon>ExtraSytelineTables.edmx</DependentUpon>
+    </None>
+    <None Include="ExtraSytelineTables.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ExtraSytelineTables.edmx</DependentUpon>
+      <LastGenOutput>ExtraSytelineTables.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -107,9 +151,12 @@
     </None>
     <None Include="Service References\IDOWebServiceReference\IDOWebService.wsdl" />
     <None Include="SL8Db.dbml">
+      <SubType>Designer</SubType>
       <Generator>MSLinqToSQLGenerator</Generator>
       <LastGenOutput>SL8Db.designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
+    </None>
+    <None Include="SL8Db.dbml.layout">
+      <DependentUpon>SL8Db.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -136,12 +183,10 @@
       <LastGenOutput>QueryDefs.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <None Include="SL8Db.dbml.layout">
-      <DependentUpon>SL8Db.dbml</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

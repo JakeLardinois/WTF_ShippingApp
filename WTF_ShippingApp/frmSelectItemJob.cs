@@ -50,6 +50,7 @@ namespace WTF_ShippingApp
             }
             else
             {
+
                 MessageBox.Show("No jobs found.", "Item", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
                 FormStatus = WTFClassLibrary.FormStatus.Cancelled;
                 this.Dispose();

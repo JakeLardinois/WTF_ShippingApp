@@ -136,7 +136,7 @@ WHERE Item = '~p0'</value>
   </data>
   <data name="InsertIntoRecievedItemAccumulator" xml:space="preserve">
     <value>INSERT INTO ReceivedItemAccumulator 
-	(item, job, JobOrderNumber, TotalQuantity) VALUES ('~p0', '~p1', '~p2', ~p3)</value>
+	(item, job, JobOrderNumber, TotalQuantity, suffix) VALUES ('~p0', '~p1', '~p2', ~p3, ~p4)</value>
   </data>
   <data name="InsertIntoRecievedItemHistory" xml:space="preserve">
     <value>INSERT INTO ReceivedItemHistory(job, item, quantity, operator, GrossWgt, LabelSequence, co, PalletCt, suffix)
@@ -244,6 +244,13 @@ AND TotalQuantity ~p1</value>
 FROM item INNER JOIN job ON item.item = job.item 
 INNER JOIN itemwhse ON item.item = itemwhse.item
 WHERE job.type='J' AND item.item='~p0' AND (job.stat = 'R' OR job.stat = 'F')
+AND itemwhse.whse ='MAIN' ORDER BY job.job</value>
+  </data>
+  <data name="SelectMFGItemJobsByJobList" xml:space="preserve">
+    <value>SELECT job.job, job.suffix, job.qty_released, job.qty_complete, item.description, item.u_m, job.ord_release, job.ord_num, itemwhse.qty_on_hand, item.drawing_nbr, item.charfld1
+FROM item INNER JOIN job ON item.item = job.item 
+INNER JOIN itemwhse ON item.item = itemwhse.item
+WHERE job.type='J' AND item.item='~p0' AND job.job IN (~p1)
 AND itemwhse.whse ='MAIN' ORDER BY job.job</value>
   </data>
   <data name="SelectMFGItemOrderLines" xml:space="preserve">

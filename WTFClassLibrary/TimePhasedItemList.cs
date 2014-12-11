@@ -65,7 +65,7 @@ namespace WTFClassLibrary
                 {
                     objRepletionDepletionItem = new RepletionDepletionItem
                     {
-                        DueDate = objAnonymousRepletionDepletion.Field<DateTime?>("DisplayDate") ?? DateTime.MinValue,//This was how I stopped the null errors from the null dates in the db
+                        //DueDate = objAnonymousRepletionDepletion.Field<DateTime?>("DisplayDate") ?? DateTime.MinValue,//This was how I stopped the null errors from the null dates in the db
                         ProjectedOnHand = objAnonymousRepletionDepletion.Field<decimal>("QtyOnHand"),
                         Qty = objAnonymousRepletionDepletion.Field<decimal>("Qty"),
                         Status = objAnonymousRepletionDepletion.Field<string>("RcptRqmt"),
@@ -92,6 +92,7 @@ namespace WTFClassLibrary
                             .Where(w => !string.IsNullOrEmpty(w.Field<string>("DerJob")) && w.Field<string>("DerJob").Equals(objRepletionDepletionItem.Job))
                             .Where(w => !w.IsNull("DerOperNum") && w.Field<int>("DerOperNum") == objRepletionDepletionItem.Operation)
                             .Where(w => !w.IsNull("DerSuffix") && w.Field<Int16>("DerSuffix") == objRepletionDepletionItem.Suffix)
+                            .OrderBy(w => w.Field<DateTime>("STARTDATE")) //sort the load so I get the earliest date...
                             .FirstOrDefault();
                         //I kept getting unhandled null exceptions when executing the below query. turns out that there were nulls in the stored procedure and I needed to check for them; see altered query above.
                         //var query = objLoadDataSet.Tables[0].AsEnumerable()
@@ -104,6 +105,7 @@ namespace WTFClassLibrary
                         {
                             objRepletionDepletionItem.WorkCenter = query.Field<string>("DerWC");
                             //objRepletionDepletionItem.ItemID = query.Field<string>("PARTID");
+                            objRepletionDepletionItem.DueDate = query.Field<DateTime?>("STARTDATE") ?? DateTime.MinValue; //set the DueDate to the earliest operation start date...
                         }
                     }
 

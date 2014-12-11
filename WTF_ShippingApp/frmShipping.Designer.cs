@@ -75,6 +75,7 @@
             this.chkIsSubItem = new System.Windows.Forms.CheckBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtQtyOnHand = new System.Windows.Forms.TextBox();
+            this.btnWrongCount = new System.Windows.Forms.Button();
             this.GroupBox1.SuspendLayout();
             this.GroupBox2.SuspendLayout();
             this.Panel1.SuspendLayout();
@@ -521,11 +522,23 @@
             this.txtQtyOnHand.Size = new System.Drawing.Size(87, 20);
             this.txtQtyOnHand.TabIndex = 26;
             // 
+            // btnWrongCount
+            // 
+            this.btnWrongCount.ForeColor = System.Drawing.Color.Red;
+            this.btnWrongCount.Location = new System.Drawing.Point(483, 82);
+            this.btnWrongCount.Name = "btnWrongCount";
+            this.btnWrongCount.Size = new System.Drawing.Size(87, 63);
+            this.btnWrongCount.TabIndex = 27;
+            this.btnWrongCount.Text = "Record A Wrong Count";
+            this.btnWrongCount.UseVisualStyleBackColor = true;
+            this.btnWrongCount.Click += new System.EventHandler(this.btnWrongCount_Click);
+            // 
             // frmShipping
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(744, 452);
+            this.Controls.Add(this.btnWrongCount);
             this.Controls.Add(this.txtQtyOnHand);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.Label1);
@@ -601,5 +614,6 @@
         private System.Windows.Forms.Label lblQuantityError;
         private System.Windows.Forms.Label lblPcWeightError;
         internal System.Windows.Forms.TextBox txtItemNumber;
+        private System.Windows.Forms.Button btnWrongCount;
     }
 }

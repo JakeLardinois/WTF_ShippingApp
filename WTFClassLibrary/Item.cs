@@ -335,6 +335,22 @@ namespace WTFClassLibrary
                 objDataAdapter = new SqlDataAdapter(objSQLCommand);
                 objDataAdapter.Fill(objDataTable);
 
+                //MODIFIED by JakeL on 8-26-2014
+                if (objDataTable.Rows.Count == 0)
+                {
+                    var objStrBldr = new StringBuilder();
+                    var objHistoryJobList = this.JobsInInventory;
+
+                    foreach (var objHistoryJob in objHistoryJobList)
+                        objStrBldr.Append("'" + objHistoryJob.JobNumber + "', ");
+
+                    strSQL = QueryDefinitions.GetQuery("SelectMFGItemJobsByJobList", new string[] { ItemID, objStrBldr.ToString().Remove(objStrBldr.Length - 2) });
+                    //objSL8_WTF_DataBaseSettings.SQLConnection.Open();
+                    objSQLCommand = new SqlCommand(strSQL, objSL8_WTF_DataBaseSettings.SQLConnection);
+                    objDataAdapter = new SqlDataAdapter(objSQLCommand);
+                    objDataAdapter.Fill(objDataTable);
+                }
+
                 QtyOnHand = double.TryParse(objDataTable.Rows[0]["qty_on_hand"].ToString(), out dblTemp) ? dblTemp : 0.0;
 
                 DrawingNumber = objDataTable.Rows[0]["drawing_nbr"].ToString();
@@ -363,7 +379,7 @@ namespace WTFClassLibrary
 
                     objJobList.Add(objJob);
                 }
-
+                
                 //if (IsMFG)
                 //{
                 //    SL8_WTF_DataBaseSettings objSL8_WTF_DataBaseSettings;
@@ -907,6 +923,16 @@ namespace WTFClassLibrary
 
                 return objStockLocationList;
             }
+        }
+
+        public void AddWrongCount() 
+        {
+            ExtraSytelineTableDb objDb;
+
+
+            objDb = new ExtraSytelineTableDb();
+            objDb.WrongCounts.Add(new WrongCount { Item = this.ItemID, OccurranceDate = DateTime.Now });
+            objDb.SaveChanges();
         }
     }
 }

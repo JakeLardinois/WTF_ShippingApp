@@ -52,7 +52,6 @@
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -67,7 +66,6 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <BackgroundColor>Black</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -92,7 +90,6 @@
                               <Style>
                                 <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -105,10 +102,6 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <LeftBorder>
-                          <Color>White</Color>
-                        </LeftBorder>
-                        <BackgroundColor>Black</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -129,7 +122,6 @@
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -144,10 +136,6 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <LeftBorder>
-                          <Color>White</Color>
-                        </LeftBorder>
-                        <BackgroundColor>Black</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -169,7 +157,6 @@
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -184,10 +171,6 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <LeftBorder>
-                          <Color>White</Color>
-                        </LeftBorder>
-                        <BackgroundColor>Black</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -209,7 +192,6 @@
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -224,10 +206,6 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <LeftBorder>
-                          <Color>White</Color>
-                        </LeftBorder>
-                        <BackgroundColor>Black</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -252,7 +230,6 @@
                               <Style>
                                 <FontSize>9pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -265,10 +242,6 @@
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <LeftBorder>
-                          <Color>White</Color>
-                        </LeftBorder>
-                        <BackgroundColor>Black</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -661,7 +634,6 @@ LINE</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -676,10 +648,6 @@ LINE</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <LeftBorder>
-                          <Color>Black</Color>
-                        </LeftBorder>
-                        <BackgroundColor>Black</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -702,7 +670,6 @@ SHIP DATE</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -717,10 +684,6 @@ SHIP DATE</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <LeftBorder>
-                          <Color>White</Color>
-                        </LeftBorder>
-                        <BackgroundColor>Black</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
@@ -740,7 +703,6 @@ SHIP DATE</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -755,10 +717,6 @@ SHIP DATE</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <LeftBorder>
-                          <Color>White</Color>
-                        </LeftBorder>
-                        <BackgroundColor>Black</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -782,7 +740,6 @@ SHIP DATE</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -797,10 +754,6 @@ SHIP DATE</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <LeftBorder>
-                          <Color>White</Color>
-                        </LeftBorder>
-                        <BackgroundColor>Black</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -824,7 +777,6 @@ SHIP DATE</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -839,10 +791,6 @@ SHIP DATE</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <LeftBorder>
-                          <Color>White</Color>
-                        </LeftBorder>
-                        <BackgroundColor>Black</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -865,7 +813,6 @@ ORDERED</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -880,10 +827,6 @@ ORDERED</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <LeftBorder>
-                          <Color>White</Color>
-                        </LeftBorder>
-                        <BackgroundColor>Black</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -906,7 +849,6 @@ SHIPPED</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -921,10 +863,6 @@ SHIPPED</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <LeftBorder>
-                          <Color>White</Color>
-                        </LeftBorder>
-                        <BackgroundColor>Black</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -947,7 +885,6 @@ BACK-ORD</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -962,10 +899,6 @@ BACK-ORD</Value>
                         <Border>
                           <Style>Solid</Style>
                         </Border>
-                        <LeftBorder>
-                          <Color>White</Color>
-                        </LeftBorder>
-                        <BackgroundColor>Black</BackgroundColor>
                         <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
@@ -1029,13 +962,13 @@ BACK-ORD</Value>
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="textbox73">
+                    <Textbox Name="PromiseDate">
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Format(Fields!DueDate.Value, "MM/dd/yyyy")</Value>
+                              <Value>=Format(Fields!PromiseDate.Value, "MM/dd/yyyy")</Value>
                               <Style>
                                 <FontSize>9pt</FontSize>
                               </Style>
@@ -1046,7 +979,7 @@ BACK-ORD</Value>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>textbox73</rd:DefaultName>
+                      <rd:DefaultName>PromiseDate</rd:DefaultName>
                       <ZIndex>68</ZIndex>
                       <Style>
                         <TopBorder>
@@ -4057,7 +3990,6 @@ WITHOUT OUR AUTHORIZIATION.</Value>
                   <Style>
                     <FontSize>8pt</FontSize>
                     <FontWeight>Bold</FontWeight>
-                    <Color>White</Color>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -4070,7 +4002,9 @@ WITHOUT OUR AUTHORIZIATION.</Value>
           <Height>0.48in</Height>
           <Width>7.9625in</Width>
           <Style>
-            <BackgroundColor>Black</BackgroundColor>
+            <Border>
+              <Style>None</Style>
+            </Border>
             <PaddingLeft>15pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
             <PaddingTop>2pt</PaddingTop>
