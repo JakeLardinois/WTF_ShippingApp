@@ -26,5 +26,6 @@ namespace WTFClassLibrary
         }
     
         public DbSet<WrongCount> WrongCounts { get; set; }
+        public DbSet<PackingSlip> PackingSlips { get; set; }
     }
 }

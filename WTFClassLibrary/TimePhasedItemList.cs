@@ -11,7 +11,8 @@ namespace WTFClassLibrary
 {
     public class TimePhasedItemList : SortableBindingList<TimePhasedItem>
     {
-        public TimePhasedItemList()
+
+        public TimePhasedItemList(bool SetDueDateByProjectedSchedule)
             : base()
         {
             SL8_WTF_DataBaseSettings objSL8_WTF_DataBaseSettings;
@@ -65,7 +66,7 @@ namespace WTFClassLibrary
                 {
                     objRepletionDepletionItem = new RepletionDepletionItem
                     {
-                        //DueDate = objAnonymousRepletionDepletion.Field<DateTime?>("DisplayDate") ?? DateTime.MinValue,//This was how I stopped the null errors from the null dates in the db
+                        DueDate = objAnonymousRepletionDepletion.Field<DateTime?>("DisplayDate") ?? DateTime.MinValue,//This was how I stopped the null errors from the null dates in the db
                         ProjectedOnHand = objAnonymousRepletionDepletion.Field<decimal>("QtyOnHand"),
                         Qty = objAnonymousRepletionDepletion.Field<decimal>("Qty"),
                         Status = objAnonymousRepletionDepletion.Field<string>("RcptRqmt"),
@@ -105,7 +106,8 @@ namespace WTFClassLibrary
                         {
                             objRepletionDepletionItem.WorkCenter = query.Field<string>("DerWC");
                             //objRepletionDepletionItem.ItemID = query.Field<string>("PARTID");
-                            objRepletionDepletionItem.DueDate = query.Field<DateTime?>("STARTDATE") ?? DateTime.MinValue; //set the DueDate to the earliest operation start date...
+                            if (SetDueDateByProjectedSchedule)
+                                objRepletionDepletionItem.DueDate = query.Field<DateTime?>("STARTDATE") ?? DateTime.MinValue; //set the DueDate to the earliest operation start date...
                         }
                     }
 

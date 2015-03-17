@@ -75,6 +75,7 @@
             this.txtQtyBO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtNotes = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clndrDueDate = new WTF_ShippingApp.CalendarColumn();
+            this.chkStorePackingSlip = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.PictureBox1)).BeginInit();
             this.grpAddress.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvOrderLines)).BeginInit();
@@ -505,11 +506,24 @@
             this.clndrDueDate.Name = "clndrDueDate";
             this.clndrDueDate.Width = 86;
             // 
+            // chkStorePackingSlip
+            // 
+            this.chkStorePackingSlip.AutoSize = true;
+            this.chkStorePackingSlip.Checked = true;
+            this.chkStorePackingSlip.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkStorePackingSlip.Location = new System.Drawing.Point(536, 433);
+            this.chkStorePackingSlip.Name = "chkStorePackingSlip";
+            this.chkStorePackingSlip.Size = new System.Drawing.Size(113, 17);
+            this.chkStorePackingSlip.TabIndex = 60;
+            this.chkStorePackingSlip.Text = "Store Packing Slip";
+            this.chkStorePackingSlip.UseVisualStyleBackColor = true;
+            // 
             // frmPackingSlip
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(754, 462);
+            this.Controls.Add(this.chkStorePackingSlip);
             this.Controls.Add(this.chkLastFilledOrder);
             this.Controls.Add(this.lblPackingSlipSuffix);
             this.Controls.Add(this.chkEnableOrderLinePrefix);
@@ -597,5 +611,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn txtNotes;
         private CalendarColumn clndrDueDate;
         private System.Windows.Forms.CheckBox chkLastFilledOrder;
+        private System.Windows.Forms.CheckBox chkStorePackingSlip;
     }
 }

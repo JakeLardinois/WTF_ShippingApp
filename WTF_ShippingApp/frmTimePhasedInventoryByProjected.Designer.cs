@@ -1,6 +1,6 @@
 ﻿namespace WTF_ShippingApp
 {
-    partial class frmTimePhasedInventory
+    partial class frmTimePhasedInventoryByProjected
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTimePhasedInventory));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTimePhasedInventoryByProjected));
             this.cmiCheckAll = new System.Windows.Forms.ToolStripMenuItem();
             this.cmuPurchasedItems = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cmiUncheckAll = new System.Windows.Forms.ToolStripMenuItem();
@@ -442,7 +442,7 @@
             this.btnView.UseVisualStyleBackColor = true;
             this.btnView.Click += new System.EventHandler(this.btnView_Click);
             // 
-            // frmTimePhasedInventory
+            // frmTimePhasedInventoryByProjected
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -453,8 +453,8 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Name = "frmTimePhasedInventory";
-            this.Text = "Time Phased Inventory - Due Date";
+            this.Name = "frmTimePhasedInventoryByProjected";
+            this.Text = "Time Phased Inventory - Projected";
             this.Load += new System.EventHandler(this.frmTimePhasedInventory_Load);
             this.cmuPurchasedItems.ResumeLayout(false);
             this.Items.ResumeLayout(false);

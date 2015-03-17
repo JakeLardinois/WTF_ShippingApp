@@ -328,7 +328,7 @@ AND (RTRIM(LTRIM(co.co_num))) = '~p1'</value>
     <comment>I had a problem with this query not returning any values.  The root cause was that the "Ship Via"field in SL needed to be populated.  I wasn't sure why, since this was an inner join...  UPDATE - I noticed on another query that using a left join was what allowed the query to work.</comment>
   </data>
   <data name="SelectMFGItemOrders" xml:space="preserve">
-    <value>SELECT DISTINCT co.co_num, co.type, coitem.co_line, co.cust_po, coitem.cust_item, co.cust_num, custaddr.name, co.order_date, co.cust_seq
+    <value>SELECT DISTINCT co.co_num, co.type, coitem.co_line, co.cust_po, coitem.cust_item, co.cust_num, custaddr.name, co.order_date, co.cust_seq, co.decifld1
 FROM co 
 INNER JOIN coitem ON co.co_num = coitem.co_num 
 INNER JOIN customer ON co.cust_num = customer.cust_num AND co.cust_seq = customer.cust_seq
@@ -337,7 +337,7 @@ WHERE coitem.item = '~p0'
 AND co.stat='O' AND coitem.stat='O'</value>
   </data>
   <data name="SelectMFGItemOrdersFilled" xml:space="preserve">
-    <value>SELECT DISTINCT co.co_num, co.type, coitem.co_line, co.cust_po, coitem.cust_item, co.cust_num, custaddr.name, co.order_date, co.cust_seq
+    <value>SELECT DISTINCT co.co_num, co.type, coitem.co_line, co.cust_po, coitem.cust_item, co.cust_num, custaddr.name, co.order_date, co.cust_seq, co.decifld1
 FROM co 
 INNER JOIN coitem ON co.co_num = coitem.co_num 
 INNER JOIN customer ON co.cust_num = customer.cust_num AND co.cust_seq = customer.cust_seq

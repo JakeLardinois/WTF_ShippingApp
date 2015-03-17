@@ -63,6 +63,14 @@ namespace WTF_ShippingApp
                 txtGrossWgt.Text = mobjBOL.GrossWeight.ToString();
                 txtPalletCt.Text = mobjBOL.PalletCount.ToString();
             }
+
+            ToolTip tltipSavePackingSlip = new ToolTip();
+            tltipSavePackingSlip.AutoPopDelay = 5000;
+            tltipSavePackingSlip.InitialDelay = 1000;
+            tltipSavePackingSlip.ReshowDelay = 500;
+            tltipSavePackingSlip.ShowAlways = true;
+            tltipSavePackingSlip.SetToolTip(chkStorePackingSlip, "Check this to store the Packing Slip after the 'Print' button is pressed...");
+
         }
 
         private void AddOrderReleaseColumn()
@@ -186,6 +194,9 @@ namespace WTF_ShippingApp
 
             objPackingSlipReportForm.ShowDialog();
 
+            if (chkStorePackingSlip.Checked)
+                StorePackingSlip(objParameterArray);
+
             if (MessageBox.Show("Did you print the packing slip?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question,
                 MessageBoxDefaultButton.Button2) == System.Windows.Forms.DialogResult.Yes)
             {
@@ -194,6 +205,45 @@ namespace WTF_ShippingApp
             }
                 
         }
+
+        private void StorePackingSlip(ReportParameter[] objParameterArray)
+        {
+            decimal decTemp;
+
+
+            var objPackingSlipLines = new List<PackingSlip>();
+            foreach (var objOrder in mobjOrderLines)
+            {
+                objPackingSlipLines.Add(new PackingSlip
+                {
+                    PackingSlipNo = objParameterArray[1].Values[0] + "-" + objParameterArray[5].Values[0],
+                    OrderLinePrefix = objParameterArray[0].Values[0],
+                    CustomerOrderNumber = objParameterArray[1].Values[0],
+                    OrderNotes = objParameterArray[2].Values[0],
+                    CustomerAddress = objParameterArray[3].Values[0],
+                    CustomerNumber = objParameterArray[4].Values[0],
+                    CustomerOrderSuffix = objParameterArray[5].Values[0],
+                    ActualShipDate = dtmActualShipDate.Value, // objParameterArray[6].Values[0],
+                    GrossWeight = decimal.TryParse(objParameterArray[7].Values[0], out decTemp) ? decTemp : 0.0M,
+                    NoOfCartons = decimal.TryParse(objParameterArray[8].Values[0], out decTemp) ? decTemp : 0.0M,
+                    NoOfPallets = decimal.TryParse(objParameterArray[9].Values[0], out decTemp) ? decTemp : 0.0M,
+                    JobNumber = objParameterArray[10].Values[0],
+                    PrintDate = DateTime.Now,
+                    CustomerOrderLine = objOrder.CustomerOrderLine,
+                    CustomerOrderRelease = objOrder.CustomerOrderRelease,
+                    PromiseDate = objOrder.PromiseDate,
+                    ItemID = objOrder.ItemID,
+                    ItemDescription = objOrder.ItemDescription,
+                    QtyOrdered = objOrder.QtyOrdered,
+                    QtyShipped = objOrder.QtyShipped,
+                    QtyBackOrdered = objOrder.QtyBackOrdered,
+                    Revision = objOrder.ItemRevision,
+                    CustomerPO = objOrder.CustomerPO
+                });
+            }
+            mobjOrder.SavePackingSlips(objPackingSlipLines);
+        }
+
 
         //private void Validate(object sender, CancelEventArgs e)
         //{

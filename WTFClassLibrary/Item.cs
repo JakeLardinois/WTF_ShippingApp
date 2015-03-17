@@ -121,6 +121,7 @@ namespace WTFClassLibrary
                 string strSQL;
                 DateTime dtmTemp;
                 int intTemp;
+                double dblTemp;
                 Match objMFGMatch, objDashIntMatch;
 
 
@@ -188,6 +189,8 @@ namespace WTFClassLibrary
                     objOrder.OrderDate = DateTime.TryParse(objRow["order_date"].ToString(), out dtmTemp) ? dtmTemp : DateTime.MinValue;
 
                     objOrder.SelectedAddressNo = int.TryParse(objRow["cust_seq"].ToString(), out intTemp) ? intTemp : 0;
+
+                    objOrder.PackingSlipPrintSequence = double.TryParse(objRow["decifld1"].ToString(), out dblTemp) ? (int)dblTemp : 0;
 
                     objOrderList.Add(objOrder);
                 }

@@ -33,22 +33,24 @@
             this.MainMenu1 = new System.Windows.Forms.MainMenu(this.components);
             this.MenuItem1 = new System.Windows.Forms.MenuItem();
             this.MenuItem6 = new System.Windows.Forms.MenuItem();
+            this.menuItem16 = new System.Windows.Forms.MenuItem();
             this.MenuItem2 = new System.Windows.Forms.MenuItem();
             this.MenuItem3 = new System.Windows.Forms.MenuItem();
+            this.menuItem19 = new System.Windows.Forms.MenuItem();
             this.MenuItem5 = new System.Windows.Forms.MenuItem();
             this.MenuItem8 = new System.Windows.Forms.MenuItem();
             this.menuItem17 = new System.Windows.Forms.MenuItem();
-            this.menuItem10 = new System.Windows.Forms.MenuItem();
             this.MenuItem9 = new System.Windows.Forms.MenuItem();
             this.menuItem15 = new System.Windows.Forms.MenuItem();
             this.menuItem12 = new System.Windows.Forms.MenuItem();
             this.menuItem13 = new System.Windows.Forms.MenuItem();
             this.menuItem14 = new System.Windows.Forms.MenuItem();
-            this.menuItem16 = new System.Windows.Forms.MenuItem();
-            this.MenuItem7 = new System.Windows.Forms.MenuItem();
-            this.menuItem18 = new System.Windows.Forms.MenuItem();
-            this.menuItem19 = new System.Windows.Forms.MenuItem();
             this.menuItem21 = new System.Windows.Forms.MenuItem();
+            this.menuItem10 = new System.Windows.Forms.MenuItem();
+            this.menuItem18 = new System.Windows.Forms.MenuItem();
+            this.menuItem4 = new System.Windows.Forms.MenuItem();
+            this.MenuItem7 = new System.Windows.Forms.MenuItem();
+            this.menuItem11 = new System.Windows.Forms.MenuItem();
             this.SuspendLayout();
             // 
             // MainMenu1
@@ -75,6 +77,12 @@
             this.MenuItem6.Text = "Exit";
             this.MenuItem6.Click += new System.EventHandler(this.MenuItem6_Click);
             // 
+            // menuItem16
+            // 
+            this.menuItem16.Index = 1;
+            this.menuItem16.Text = "Version";
+            this.menuItem16.Click += new System.EventHandler(this.menuItem16_Click);
+            // 
             // MenuItem2
             // 
             this.MenuItem2.Index = 1;
@@ -88,6 +96,17 @@
             // 
             this.MenuItem3.Index = 0;
             this.MenuItem3.Text = "Database...";
+            // 
+            // menuItem19
+            // 
+            this.menuItem19.Index = 2;
+            this.menuItem19.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.MenuItem5,
+            this.MenuItem8,
+            this.menuItem17,
+            this.menuItem11,
+            this.MenuItem9});
+            this.menuItem19.Text = "Shipping";
             // 
             // MenuItem5
             // 
@@ -110,16 +129,9 @@
             this.menuItem17.Text = "&Quick Label Printer";
             this.menuItem17.Click += new System.EventHandler(this.menuItem17_Click);
             // 
-            // menuItem10
-            // 
-            this.menuItem10.Index = 0;
-            this.menuItem10.Shortcut = System.Windows.Forms.Shortcut.CtrlP;
-            this.menuItem10.Text = "&Purchase Requirements";
-            this.menuItem10.Click += new System.EventHandler(this.menuItem10_Click_1);
-            // 
             // MenuItem9
             // 
-            this.MenuItem9.Index = 3;
+            this.MenuItem9.Index = 4;
             this.MenuItem9.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
             this.menuItem15,
             this.menuItem12,
@@ -151,11 +163,34 @@
             this.menuItem14.Text = "Manage Ship Classifications";
             this.menuItem14.Click += new System.EventHandler(this.menuItem14_Click);
             // 
-            // menuItem16
+            // menuItem21
             // 
-            this.menuItem16.Index = 1;
-            this.menuItem16.Text = "Version";
-            this.menuItem16.Click += new System.EventHandler(this.menuItem16_Click);
+            this.menuItem21.Index = 3;
+            this.menuItem21.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuItem10,
+            this.menuItem18,
+            this.menuItem4});
+            this.menuItem21.Text = "Purchasing";
+            // 
+            // menuItem10
+            // 
+            this.menuItem10.Index = 0;
+            this.menuItem10.Shortcut = System.Windows.Forms.Shortcut.CtrlP;
+            this.menuItem10.Text = "&Purchase Requirements";
+            this.menuItem10.Click += new System.EventHandler(this.menuItem10_Click_1);
+            // 
+            // menuItem18
+            // 
+            this.menuItem18.Index = 1;
+            this.menuItem18.Shortcut = System.Windows.Forms.Shortcut.CtrlT;
+            this.menuItem18.Text = "Time Phased Inventory - Due Date";
+            this.menuItem18.Click += new System.EventHandler(this.menuItem18_Click);
+            // 
+            // menuItem4
+            // 
+            this.menuItem4.Index = 2;
+            this.menuItem4.Text = "Time Phased Inventory - Projected Date";
+            this.menuItem4.Click += new System.EventHandler(this.menuItem4_Click);
             // 
             // MenuItem7
             // 
@@ -163,30 +198,11 @@
             this.MenuItem7.MdiList = true;
             this.MenuItem7.Text = "Window";
             // 
-            // menuItem18
+            // menuItem11
             // 
-            this.menuItem18.Index = 1;
-            this.menuItem18.Shortcut = System.Windows.Forms.Shortcut.CtrlT;
-            this.menuItem18.Text = "&Time Phased Inventory";
-            this.menuItem18.Click += new System.EventHandler(this.menuItem18_Click);
-            // 
-            // menuItem19
-            // 
-            this.menuItem19.Index = 2;
-            this.menuItem19.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.MenuItem5,
-            this.MenuItem8,
-            this.menuItem17,
-            this.MenuItem9});
-            this.menuItem19.Text = "Shipping";
-            // 
-            // menuItem21
-            // 
-            this.menuItem21.Index = 3;
-            this.menuItem21.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.menuItem10,
-            this.menuItem18});
-            this.menuItem21.Text = "Purchasing";
+            this.menuItem11.Index = 3;
+            this.menuItem11.Text = "Packing Slip History";
+            this.menuItem11.Click += new System.EventHandler(this.menuItem11_Click);
             // 
             // frmMain
             // 
@@ -224,5 +240,7 @@
         private System.Windows.Forms.MenuItem menuItem18;
         private System.Windows.Forms.MenuItem menuItem19;
         private System.Windows.Forms.MenuItem menuItem21;
+        private System.Windows.Forms.MenuItem menuItem4;
+        private System.Windows.Forms.MenuItem menuItem11;
     }
 }

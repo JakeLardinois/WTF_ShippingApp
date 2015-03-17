@@ -103,5 +103,17 @@ namespace WTF_ShippingApp
             frmTimePhasedInventory objfrmTimePhasedInventory = new frmTimePhasedInventory();
             LoadForm(objfrmTimePhasedInventory);
         }
+
+        private void menuItem4_Click(object sender, EventArgs e)
+        {
+            frmTimePhasedInventoryByProjected objfrmTimePhasedInventoryByProjected = new frmTimePhasedInventoryByProjected();
+            LoadForm(objfrmTimePhasedInventoryByProjected);
+        }
+
+        private void menuItem11_Click(object sender, EventArgs e)
+        {
+            frmPackingSlipHistory objfrmPackingSlipHistory = new frmPackingSlipHistory();
+            LoadForm(objfrmPackingSlipHistory);
+        }
     }
 }

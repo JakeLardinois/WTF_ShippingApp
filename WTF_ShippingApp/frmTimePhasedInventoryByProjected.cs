@@ -13,7 +13,7 @@ using System.IO;
 
 namespace WTF_ShippingApp
 {
-    public partial class frmTimePhasedInventory : Form
+    public partial class frmTimePhasedInventoryByProjected : Form
     {
         public TimePhasedItemList TimePhasedItemList { get; set; }
         private BindingSource bs1 = new BindingSource();
@@ -23,7 +23,7 @@ namespace WTF_ShippingApp
         public BackgroundWorker bw;
 
 
-        public frmTimePhasedInventory()
+        public frmTimePhasedInventoryByProjected()
         {
             InitializeComponent();
 
@@ -70,7 +70,7 @@ namespace WTF_ShippingApp
 
         private void bw_DoWork(object sender, DoWorkEventArgs e)
         {
-            TimePhasedItemList = new TimePhasedItemList(false);
+            TimePhasedItemList = new TimePhasedItemList(true);
         }
 
         private void bw_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)

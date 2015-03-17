@@ -173,5 +173,39 @@ namespace WTFClassLibrary
             else
                 return false;
         }
+        public void SavePackingSlips(List<PackingSlip> objPackingSlips)
+        {
+            ExtraSytelineTableDb db = new ExtraSytelineTableDb();
+
+            foreach (var objPackingSlip in objPackingSlips)
+                db.PackingSlips.Add(new PackingSlip
+                {
+                    PackingSlipNo = objPackingSlip.PackingSlipNo,
+                    OrderLinePrefix = objPackingSlip.OrderLinePrefix,
+                    CustomerOrderNumber = objPackingSlip.CustomerOrderNumber,
+                    OrderNotes = objPackingSlip.OrderNotes,
+                    CustomerAddress = objPackingSlip.CustomerAddress,
+                    CustomerNumber = objPackingSlip.CustomerNumber,
+                    CustomerOrderSuffix = objPackingSlip.CustomerOrderSuffix,
+                    ActualShipDate = objPackingSlip.ActualShipDate,
+                    GrossWeight = objPackingSlip.GrossWeight,
+                    NoOfCartons = objPackingSlip.NoOfCartons,
+                    NoOfPallets = objPackingSlip.NoOfPallets,
+                    JobNumber = objPackingSlip.JobNumber,
+                    PrintDate = objPackingSlip.PrintDate,
+                    CustomerOrderLine = objPackingSlip.CustomerOrderLine,
+                    CustomerOrderRelease = objPackingSlip.CustomerOrderRelease,
+                    PromiseDate = objPackingSlip.PromiseDate,
+                    ItemID = objPackingSlip.ItemID,
+                    ItemDescription = objPackingSlip.ItemDescription,
+                    QtyOrdered = objPackingSlip.QtyOrdered,
+                    QtyShipped = objPackingSlip.QtyShipped,
+                    QtyBackOrdered = objPackingSlip.QtyBackOrdered,
+                    Revision = objPackingSlip.Revision,
+                    CustomerPO = objPackingSlip.CustomerPO
+                });
+
+            db.SaveChanges();
+        }
     }
 }

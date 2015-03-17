@@ -6,8 +6,38 @@
     <edmx:StorageModels>
     <Schema Namespace="ExtraSytelineTablesModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="ExtraSytelineTablesModelStoreContainer">
+          <EntitySet Name="PackingSlips" EntityType="ExtraSytelineTablesModel.Store.PackingSlips" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="WrongCounts" EntityType="ExtraSytelineTablesModel.Store.WrongCounts" store:Type="Tables" Schema="dbo" />
         </EntityContainer>
+        <EntityType Name="PackingSlips">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="bigint" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PackingSlipNo" Type="nvarchar" MaxLength="50" />
+          <Property Name="OrderLinePrefix" Type="nvarchar" MaxLength="10" />
+          <Property Name="CustomerOrderNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="CustomerPO" Type="nvarchar" MaxLength="50" />
+          <Property Name="OrderNotes" Type="nvarchar(max)" />
+          <Property Name="CustomerAddress" Type="nvarchar(max)" />
+          <Property Name="CustomerNumber" Type="nvarchar" MaxLength="10" />
+          <Property Name="CustomerOrderSuffix" Type="nvarchar" MaxLength="10" />
+          <Property Name="ActualShipDate" Type="datetime" />
+          <Property Name="GrossWeight" Type="decimal" />
+          <Property Name="NoOfCartons" Type="decimal" />
+          <Property Name="NoOfPallets" Type="decimal" />
+          <Property Name="JobNumber" Type="nvarchar" MaxLength="10" />
+          <Property Name="PrintDate" Type="datetime" />
+          <Property Name="CustomerOrderLine" Type="int" />
+          <Property Name="CustomerOrderRelease" Type="int" />
+          <Property Name="PromiseDate" Type="datetime" />
+          <Property Name="ItemID" Type="nvarchar" MaxLength="50" />
+          <Property Name="ItemDescription" Type="nvarchar" MaxLength="50" />
+          <Property Name="QtyOrdered" Type="decimal" />
+          <Property Name="QtyShipped" Type="decimal" />
+          <Property Name="QtyBackOrdered" Type="decimal" />
+          <Property Name="Revision" Type="nvarchar" MaxLength="10" />
+        </EntityType>
         <EntityType Name="WrongCounts">
           <Key>
             <PropertyRef Name="ID" />
@@ -22,6 +52,7 @@
       <Schema Namespace="ExtraSytelineTablesModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
         <EntityContainer Name="ExtraSytelineTableDb" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="WrongCounts" EntityType="ExtraSytelineTablesModel.WrongCount" />
+          <EntitySet Name="PackingSlips" EntityType="ExtraSytelineTablesModel.PackingSlip" />
         </EntityContainer>
         <EntityType Name="WrongCount">
           <Key>
@@ -30,6 +61,35 @@
           <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="String" Name="Item" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Type="DateTime" Name="OccurranceDate" Precision="3" />
+        </EntityType>
+        <EntityType Name="PackingSlip">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int64" />
+          <Property Name="PackingSlipNo" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="OrderLinePrefix" MaxLength="10" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="CustomerOrderNumber" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="OrderNotes" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="CustomerAddress" MaxLength="Max" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="CustomerNumber" MaxLength="10" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="CustomerOrderSuffix" MaxLength="10" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="ActualShipDate" Precision="3" Type="DateTime" />
+          <Property Name="GrossWeight" Precision="18" Scale="0" Type="Decimal" />
+          <Property Name="NoOfCartons" Precision="18" Scale="0" Type="Decimal" />
+          <Property Name="NoOfPallets" Precision="18" Scale="0" Type="Decimal" />
+          <Property Name="JobNumber" MaxLength="10" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="PrintDate" Precision="3" Type="DateTime" />
+          <Property Name="CustomerOrderLine" Type="Int32" />
+          <Property Name="PromiseDate" Precision="3" Type="DateTime" />
+          <Property Name="ItemID" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="ItemDescription" MaxLength="50" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="QtyOrdered" Precision="18" Scale="0" Type="Decimal" />
+          <Property Name="QtyShipped" Precision="18" Scale="0" Type="Decimal" />
+          <Property Name="QtyBackOrdered" Precision="18" Scale="0" Type="Decimal" />
+          <Property Name="Revision" MaxLength="10" FixedLength="false" Unicode="true" Type="String" />
+          <Property Name="CustomerOrderRelease" Type="Int32" />
+          <Property Type="String" Name="CustomerPO" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -42,6 +102,36 @@
               <MappingFragment StoreEntitySet="WrongCounts">
                 <ScalarProperty Name="OccurranceDate" ColumnName="OccurranceDate" />
                 <ScalarProperty Name="Item" ColumnName="Item" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PackingSlips">
+            <EntityTypeMapping TypeName="ExtraSytelineTablesModel.PackingSlip">
+              <MappingFragment StoreEntitySet="PackingSlips">
+                <ScalarProperty Name="CustomerPO" ColumnName="CustomerPO" />
+                <ScalarProperty Name="CustomerOrderRelease" ColumnName="CustomerOrderRelease" />
+                <ScalarProperty Name="Revision" ColumnName="Revision" />
+                <ScalarProperty Name="QtyBackOrdered" ColumnName="QtyBackOrdered" />
+                <ScalarProperty Name="QtyShipped" ColumnName="QtyShipped" />
+                <ScalarProperty Name="QtyOrdered" ColumnName="QtyOrdered" />
+                <ScalarProperty Name="ItemDescription" ColumnName="ItemDescription" />
+                <ScalarProperty Name="ItemID" ColumnName="ItemID" />
+                <ScalarProperty Name="PromiseDate" ColumnName="PromiseDate" />
+                <ScalarProperty Name="CustomerOrderLine" ColumnName="CustomerOrderLine" />
+                <ScalarProperty Name="PrintDate" ColumnName="PrintDate" />
+                <ScalarProperty Name="JobNumber" ColumnName="JobNumber" />
+                <ScalarProperty Name="NoOfPallets" ColumnName="NoOfPallets" />
+                <ScalarProperty Name="NoOfCartons" ColumnName="NoOfCartons" />
+                <ScalarProperty Name="GrossWeight" ColumnName="GrossWeight" />
+                <ScalarProperty Name="ActualShipDate" ColumnName="ActualShipDate" />
+                <ScalarProperty Name="CustomerOrderSuffix" ColumnName="CustomerOrderSuffix" />
+                <ScalarProperty Name="CustomerNumber" ColumnName="CustomerNumber" />
+                <ScalarProperty Name="CustomerAddress" ColumnName="CustomerAddress" />
+                <ScalarProperty Name="OrderNotes" ColumnName="OrderNotes" />
+                <ScalarProperty Name="CustomerOrderNumber" ColumnName="CustomerOrderNumber" />
+                <ScalarProperty Name="OrderLinePrefix" ColumnName="OrderLinePrefix" />
+                <ScalarProperty Name="PackingSlipNo" ColumnName="PackingSlipNo" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

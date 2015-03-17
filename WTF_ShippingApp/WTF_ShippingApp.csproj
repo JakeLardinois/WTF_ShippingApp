@@ -28,7 +28,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>96</ApplicationRevision>
+    <ApplicationRevision>101</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -70,13 +70,20 @@
     <ApplicationIcon>TRFFC17.ICO</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=4.4.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="Seagull.BarTender.Print, Version=10.0.4.1, Culture=neutral, PublicKeyToken=109ff779a1b4cbc7, processorArchitecture=x86" />
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
@@ -89,6 +96,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmPackingSlipHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPackingSlipHistory.Designer.cs">
+      <DependentUpon>frmPackingSlipHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTimePhasedInventoryByProjected.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTimePhasedInventoryByProjected.Designer.cs">
+      <DependentUpon>frmTimePhasedInventoryByProjected.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCustomerLabels.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,6 +288,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Content Include="TRFFC17.ICO" />
+    <EmbeddedResource Include="frmPackingSlipHistory.resx">
+      <DependentUpon>frmPackingSlipHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTimePhasedInventoryByProjected.resx">
+      <DependentUpon>frmTimePhasedInventoryByProjected.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCustomerLabels.resx">
       <DependentUpon>frmCustomerLabels.cs</DependentUpon>
     </EmbeddedResource>
@@ -380,6 +405,7 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\DataSources\System.Data.DataSet.datasource" />
     <None Include="Properties\DataSources\WTFClassLibrary.CustomerLabel.datasource" />
     <None Include="Properties\DataSources\WTFClassLibrary.ItemHistoryTransactionList.datasource" />
@@ -427,11 +453,24 @@
       <ProductName>Microsoft Report Viewer 2012 Runtime</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SQLSysClrTypes.11.0.x64">
+      <Visible>False</Visible>
+      <ProductName>Microsoft® System CLR Types for SQL Server® 2012 %28x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SQLSysClrTypes.11.0.x86">
+      <Visible>False</Visible>
+      <ProductName>Microsoft® System CLR Types for SQL Server® 2012 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
       <Visible>False</Visible>
       <ProductName>Windows Installer 4.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
