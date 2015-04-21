@@ -76,6 +76,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txtQtyOnHand = new System.Windows.Forms.TextBox();
             this.btnWrongCount = new System.Windows.Forms.Button();
+            this.chkSpecifyJob = new System.Windows.Forms.CheckBox();
             this.GroupBox1.SuspendLayout();
             this.GroupBox2.SuspendLayout();
             this.Panel1.SuspendLayout();
@@ -92,7 +93,7 @@
             // 
             // Label1
             // 
-            this.Label1.Location = new System.Drawing.Point(10, 62);
+            this.Label1.Location = new System.Drawing.Point(8, 67);
             this.Label1.Name = "Label1";
             this.Label1.Size = new System.Drawing.Size(72, 20);
             this.Label1.TabIndex = 15;
@@ -272,7 +273,7 @@
             // 
             // lblItemDescription
             // 
-            this.lblItemDescription.Location = new System.Drawing.Point(82, 82);
+            this.lblItemDescription.Location = new System.Drawing.Point(80, 87);
             this.lblItemDescription.Name = "lblItemDescription";
             this.lblItemDescription.Size = new System.Drawing.Size(364, 20);
             this.lblItemDescription.TabIndex = 22;
@@ -471,7 +472,7 @@
             // 
             // btnGetJobs
             // 
-            this.btnGetJobs.Location = new System.Drawing.Point(190, 58);
+            this.btnGetJobs.Location = new System.Drawing.Point(186, 41);
             this.btnGetJobs.Name = "btnGetJobs";
             this.btnGetJobs.Size = new System.Drawing.Size(72, 20);
             this.btnGetJobs.TabIndex = 18;
@@ -481,7 +482,7 @@
             // txtItemNumber
             // 
             this.txtItemNumber.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtItemNumber.Location = new System.Drawing.Point(82, 58);
+            this.txtItemNumber.Location = new System.Drawing.Point(80, 63);
             this.txtItemNumber.Name = "txtItemNumber";
             this.txtItemNumber.Size = new System.Drawing.Size(100, 20);
             this.txtItemNumber.TabIndex = 16;
@@ -490,15 +491,15 @@
             // btnItemSearch
             // 
             this.btnItemSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnItemSearch.Image")));
-            this.btnItemSearch.Location = new System.Drawing.Point(269, 58);
+            this.btnItemSearch.Location = new System.Drawing.Point(186, 63);
             this.btnItemSearch.Name = "btnItemSearch";
-            this.btnItemSearch.Size = new System.Drawing.Size(28, 20);
+            this.btnItemSearch.Size = new System.Drawing.Size(46, 20);
             this.btnItemSearch.TabIndex = 17;
             this.btnItemSearch.Click += new System.EventHandler(this.btnItemSearch_Click);
             // 
             // chkIsSubItem
             // 
-            this.chkIsSubItem.Location = new System.Drawing.Point(326, 60);
+            this.chkIsSubItem.Location = new System.Drawing.Point(238, 66);
             this.chkIsSubItem.Name = "chkIsSubItem";
             this.chkIsSubItem.Size = new System.Drawing.Size(80, 16);
             this.chkIsSubItem.TabIndex = 24;
@@ -533,11 +534,20 @@
             this.btnWrongCount.UseVisualStyleBackColor = true;
             this.btnWrongCount.Click += new System.EventHandler(this.btnWrongCount_Click);
             // 
+            // chkSpecifyJob
+            // 
+            this.chkSpecifyJob.Location = new System.Drawing.Point(264, 45);
+            this.chkSpecifyJob.Name = "chkSpecifyJob";
+            this.chkSpecifyJob.Size = new System.Drawing.Size(88, 16);
+            this.chkSpecifyJob.TabIndex = 28;
+            this.chkSpecifyJob.Text = "Specify Job";
+            // 
             // frmShipping
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(744, 452);
+            this.Controls.Add(this.chkSpecifyJob);
             this.Controls.Add(this.btnWrongCount);
             this.Controls.Add(this.txtQtyOnHand);
             this.Controls.Add(this.label7);
@@ -615,5 +625,6 @@
         private System.Windows.Forms.Label lblPcWeightError;
         internal System.Windows.Forms.TextBox txtItemNumber;
         private System.Windows.Forms.Button btnWrongCount;
+        internal System.Windows.Forms.CheckBox chkSpecifyJob;
     }
 }

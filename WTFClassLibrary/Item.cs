@@ -315,6 +315,7 @@ namespace WTFClassLibrary
             }
         }
         public Job SelectedJob { get; set; }
+        public Job SpecifiedJob { get; set; }
         public SortableSearchableBindingList<Job> Jobs
         {
             get
@@ -344,8 +345,11 @@ namespace WTFClassLibrary
                     var objStrBldr = new StringBuilder();
                     var objHistoryJobList = this.JobsInInventory;
 
-                    foreach (var objHistoryJob in objHistoryJobList)
+                    foreach (var objHistoryJob in objHistoryJobList)//looks in job history for a job list in case the job was closed before 
                         objStrBldr.Append("'" + objHistoryJob.JobNumber + "', ");
+
+                    if (SpecifiedJob != null)//Modified 4/21/2015- allows the user to specify a specific job 
+                        objStrBldr.Clear().Append("'" + SpecifiedJob.JobNumber + "', ");
 
                     strSQL = QueryDefinitions.GetQuery("SelectMFGItemJobsByJobList", new string[] { ItemID, objStrBldr.ToString().Remove(objStrBldr.Length - 2) });
                     //objSL8_WTF_DataBaseSettings.SQLConnection.Open();

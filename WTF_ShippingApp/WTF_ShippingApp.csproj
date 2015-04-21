@@ -102,6 +102,12 @@
     <Compile Include="frmPackingSlipHistory.Designer.cs">
       <DependentUpon>frmPackingSlipHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSpecifyJob.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSpecifyJob.Designer.cs">
+      <DependentUpon>frmSpecifyJob.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTimePhasedInventoryByProjected.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -290,6 +296,9 @@
     <Content Include="TRFFC17.ICO" />
     <EmbeddedResource Include="frmPackingSlipHistory.resx">
       <DependentUpon>frmPackingSlipHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSpecifyJob.resx">
+      <DependentUpon>frmSpecifyJob.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTimePhasedInventoryByProjected.resx">
       <DependentUpon>frmTimePhasedInventoryByProjected.cs</DependentUpon>

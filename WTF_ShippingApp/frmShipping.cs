@@ -199,6 +199,17 @@ namespace WTF_ShippingApp
 
             try
             {
+                //Modified 4-21-2015 - allows user to specify a job so that they can recieve items into history for jobs that have closed.
+                if (chkSpecifyJob.Checked)
+                    using (var objFrmSpecifyJob = new frmSpecifyJob())
+                        if (objFrmSpecifyJob.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                            mobjItem.SpecifiedJob = objFrmSpecifyJob.objJob;
+                        else
+                            mobjItem.SpecifiedJob = null;
+                else
+                    mobjItem.SpecifiedJob = null;
+                    
+                    
                 objSelectItemJobForm = new frmSelectItemJob(mobjItem);
                 objSelectItemJobForm.ShowDialog();
                 if (objSelectItemJobForm.FormStatus != FormStatus.Succeeded)//if user does not select a new job
