@@ -131,6 +131,8 @@ namespace WTFClassLibrary
             else
                 throw new Exception("Unable to get a valid ItemPieceWeightHistoryCount from the Settings Table.");
         }
+
+        public static List<string> JobPrefixes { get { return System.Configuration.ConfigurationManager.AppSettings["JobPrefixes"].SplitNTrim().ToList(); } }
     }
 
     public static class SharedVariables

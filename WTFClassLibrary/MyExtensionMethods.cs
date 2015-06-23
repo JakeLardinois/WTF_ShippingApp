@@ -153,5 +153,22 @@ namespace WTFClassLibrary
             T itemvalue = (T)type.GetProperty(itemkey).GetValue(dataitem, null);
             return itemvalue;
         }
+
+        //Splits a comma separated string into a list
+        public static IEnumerable<string> SplitNTrim(this string source)
+        {
+            string[] strArray;
+
+
+            strArray = source.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries);
+            if (strArray.Length > 0)
+            {
+                return source.Split(',').Select(s => s.Trim());
+            }
+            else
+                return new List<string>();
+
+
+        }
     }
 }
