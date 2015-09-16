@@ -1,6 +1,8 @@
 /WTF_ShippingApp/bin
 /WTF_ShippingApp/obj
+/WTF_ShippingApp/app.config
+
 /WTFClassLibrary/bin
 /WTFClassLibrary/obj
-/WTF_ShippingApp/app.config
 /WTFClassLibrary/app.config
+/WTFClassLibrary/Properties/Settings.settings
