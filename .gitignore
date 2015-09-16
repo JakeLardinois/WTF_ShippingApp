@@ -6,3 +6,7 @@
 /WTFClassLibrary/obj
 /WTFClassLibrary/app.config
 /WTFClassLibrary/Properties/Settings.settings
+
+!/packages
+/packages/*
+!/packages/repositories.config
