@@ -881,5 +881,13 @@ namespace WTF_ShippingApp
                     lblLabelError.Text = string.Empty;
             }
         }
+
+        private void frmPrintLabel_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Control && e.KeyCode == Keys.P)
+                btnPrint_Click(new object(), new EventArgs());
+            else if (e.Control && e.KeyCode == Keys.C)
+                btnCancel_Click(new object(), new EventArgs());
+        }
     }
 }

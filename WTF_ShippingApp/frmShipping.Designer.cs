@@ -116,7 +116,7 @@
             this.btnShip.Location = new System.Drawing.Point(236, 4);
             this.btnShip.Name = "btnShip";
             this.btnShip.Size = new System.Drawing.Size(100, 24);
-            this.btnShip.TabIndex = 10;
+            this.btnShip.TabIndex = 2;
             this.btnShip.Text = "            Ship...";
             this.btnShip.Click += new System.EventHandler(this.btnShip_Click);
             // 
@@ -139,7 +139,7 @@
             this.GroupBox1.Location = new System.Drawing.Point(10, 110);
             this.GroupBox1.Name = "GroupBox1";
             this.GroupBox1.Size = new System.Drawing.Size(440, 156);
-            this.GroupBox1.TabIndex = 19;
+            this.GroupBox1.TabIndex = 3;
             this.GroupBox1.TabStop = false;
             this.GroupBox1.Text = "Job";
             // 
@@ -159,7 +159,7 @@
             this.txtJob.Name = "txtJob";
             this.txtJob.ReadOnly = true;
             this.txtJob.Size = new System.Drawing.Size(128, 20);
-            this.txtJob.TabIndex = 1;
+            this.txtJob.TabIndex = 0;
             this.txtJob.Text = "<none selected>";
             // 
             // Label2
@@ -196,7 +196,7 @@
             this.lblOrder.Location = new System.Drawing.Point(104, 52);
             this.lblOrder.Name = "lblOrder";
             this.lblOrder.Size = new System.Drawing.Size(128, 20);
-            this.lblOrder.TabIndex = 0;
+            this.lblOrder.TabIndex = 1;
             this.lblOrder.Text = "Shipping";
             this.lblOrder.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -217,7 +217,7 @@
             this.lblDueDate.Location = new System.Drawing.Point(104, 100);
             this.lblDueDate.Name = "lblDueDate";
             this.lblDueDate.Size = new System.Drawing.Size(128, 20);
-            this.lblDueDate.TabIndex = 0;
+            this.lblDueDate.TabIndex = 3;
             this.lblDueDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Label14
@@ -237,7 +237,7 @@
             this.lblQtyReleased.Location = new System.Drawing.Point(104, 124);
             this.lblQtyReleased.Name = "lblQtyReleased";
             this.lblQtyReleased.Size = new System.Drawing.Size(128, 20);
-            this.lblQtyReleased.TabIndex = 0;
+            this.lblQtyReleased.TabIndex = 4;
             this.lblQtyReleased.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Label9
@@ -257,7 +257,7 @@
             this.lblCustomer.Location = new System.Drawing.Point(104, 76);
             this.lblCustomer.Name = "lblCustomer";
             this.lblCustomer.Size = new System.Drawing.Size(272, 20);
-            this.lblCustomer.TabIndex = 0;
+            this.lblCustomer.TabIndex = 2;
             this.lblCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // btnPrintLabel
@@ -267,7 +267,7 @@
             this.btnPrintLabel.Location = new System.Drawing.Point(12, 4);
             this.btnPrintLabel.Name = "btnPrintLabel";
             this.btnPrintLabel.Size = new System.Drawing.Size(100, 24);
-            this.btnPrintLabel.TabIndex = 9;
+            this.btnPrintLabel.TabIndex = 0;
             this.btnPrintLabel.Text = "      Print Label...";
             this.btnPrintLabel.Click += new System.EventHandler(this.btnPrintLabel_Click);
             // 
@@ -298,7 +298,7 @@
             this.GroupBox2.Location = new System.Drawing.Point(10, 278);
             this.GroupBox2.Name = "GroupBox2";
             this.GroupBox2.Size = new System.Drawing.Size(440, 124);
-            this.GroupBox2.TabIndex = 23;
+            this.GroupBox2.TabIndex = 1;
             this.GroupBox2.TabStop = false;
             this.GroupBox2.Text = "Shipping ";
             // 
@@ -318,7 +318,7 @@
             this.lblQuantityError.Location = new System.Drawing.Point(210, 95);
             this.lblQuantityError.Name = "lblQuantityError";
             this.lblQuantityError.Size = new System.Drawing.Size(0, 13);
-            this.lblQuantityError.TabIndex = 51;
+            this.lblQuantityError.TabIndex = 7;
             // 
             // lblGrossWeightError
             // 
@@ -334,7 +334,7 @@
             this.txtQuantity.Location = new System.Drawing.Point(104, 92);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(100, 20);
-            this.txtQuantity.TabIndex = 1;
+            this.txtQuantity.TabIndex = 6;
             this.txtQuantity.Enter += new System.EventHandler(this.txtQuantity_Enter);
             this.txtQuantity.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateTextBoxIsNumeric);
             // 
@@ -353,7 +353,7 @@
             this.Label3.Location = new System.Drawing.Point(16, 24);
             this.Label3.Name = "Label3";
             this.Label3.Size = new System.Drawing.Size(72, 20);
-            this.Label3.TabIndex = 0;
+            this.Label3.TabIndex = 9;
             this.Label3.Text = "Tare Wgt";
             // 
             // Button1
@@ -362,7 +362,7 @@
             this.Button1.Location = new System.Drawing.Point(208, 20);
             this.Button1.Name = "Button1";
             this.Button1.Size = new System.Drawing.Size(44, 20);
-            this.Button1.TabIndex = 2;
+            this.Button1.TabIndex = 1;
             this.Button1.Text = "READ";
             // 
             // txtTareWgt
@@ -370,7 +370,7 @@
             this.txtTareWgt.Location = new System.Drawing.Point(104, 20);
             this.txtTareWgt.Name = "txtTareWgt";
             this.txtTareWgt.Size = new System.Drawing.Size(100, 20);
-            this.txtTareWgt.TabIndex = 1;
+            this.txtTareWgt.TabIndex = 0;
             this.txtTareWgt.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateTextBoxIsNumeric);
             // 
             // txtGrossWgt
@@ -378,7 +378,7 @@
             this.txtGrossWgt.Location = new System.Drawing.Point(104, 44);
             this.txtGrossWgt.Name = "txtGrossWgt";
             this.txtGrossWgt.Size = new System.Drawing.Size(100, 20);
-            this.txtGrossWgt.TabIndex = 1;
+            this.txtGrossWgt.TabIndex = 2;
             this.txtGrossWgt.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateTextBoxIsNumeric);
             // 
             // Label4
@@ -396,7 +396,7 @@
             this.Button2.Location = new System.Drawing.Point(208, 44);
             this.Button2.Name = "Button2";
             this.Button2.Size = new System.Drawing.Size(44, 20);
-            this.Button2.TabIndex = 2;
+            this.Button2.TabIndex = 3;
             this.Button2.Text = "READ";
             // 
             // txtPieceWgt
@@ -404,7 +404,7 @@
             this.txtPieceWgt.Location = new System.Drawing.Point(104, 68);
             this.txtPieceWgt.Name = "txtPieceWgt";
             this.txtPieceWgt.Size = new System.Drawing.Size(100, 20);
-            this.txtPieceWgt.TabIndex = 1;
+            this.txtPieceWgt.TabIndex = 4;
             this.txtPieceWgt.Validating += new System.ComponentModel.CancelEventHandler(this.ValidateTextBoxIsNumeric);
             // 
             // Button3
@@ -413,7 +413,7 @@
             this.Button3.Location = new System.Drawing.Point(208, 68);
             this.Button3.Name = "Button3";
             this.Button3.Size = new System.Drawing.Size(44, 20);
-            this.Button3.TabIndex = 2;
+            this.Button3.TabIndex = 5;
             this.Button3.Text = "READ";
             // 
             // Label5
@@ -432,7 +432,7 @@
             this.btnReceive.Location = new System.Drawing.Point(124, 4);
             this.btnReceive.Name = "btnReceive";
             this.btnReceive.Size = new System.Drawing.Size(100, 24);
-            this.btnReceive.TabIndex = 9;
+            this.btnReceive.TabIndex = 1;
             this.btnReceive.Text = "           Receive...";
             this.btnReceive.Click += new System.EventHandler(this.btnReceive_Click);
             // 
@@ -443,7 +443,7 @@
             this.btnHistory.Location = new System.Drawing.Point(348, 4);
             this.btnHistory.Name = "btnHistory";
             this.btnHistory.Size = new System.Drawing.Size(100, 24);
-            this.btnHistory.TabIndex = 10;
+            this.btnHistory.TabIndex = 3;
             this.btnHistory.Text = "       History...";
             this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
             // 
@@ -457,7 +457,7 @@
             this.Panel1.Location = new System.Drawing.Point(2, 6);
             this.Panel1.Name = "Panel1";
             this.Panel1.Size = new System.Drawing.Size(568, 32);
-            this.Panel1.TabIndex = 21;
+            this.Panel1.TabIndex = 2;
             // 
             // btnPrintBOL
             // 
@@ -466,7 +466,7 @@
             this.btnPrintBOL.Location = new System.Drawing.Point(460, 4);
             this.btnPrintBOL.Name = "btnPrintBOL";
             this.btnPrintBOL.Size = new System.Drawing.Size(100, 24);
-            this.btnPrintBOL.TabIndex = 9;
+            this.btnPrintBOL.TabIndex = 4;
             this.btnPrintBOL.Text = "      Print BOL...";
             this.btnPrintBOL.Click += new System.EventHandler(this.btnPrintBOL_Click);
             // 
@@ -485,7 +485,7 @@
             this.txtItemNumber.Location = new System.Drawing.Point(80, 63);
             this.txtItemNumber.Name = "txtItemNumber";
             this.txtItemNumber.Size = new System.Drawing.Size(100, 20);
-            this.txtItemNumber.TabIndex = 16;
+            this.txtItemNumber.TabIndex = 0;
             this.txtItemNumber.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtItemNumber_KeyDown);
             // 
             // btnItemSearch
@@ -565,7 +565,7 @@
             this.Menu = this.mnuShipping;
             this.Name = "frmShipping";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Shipping";
+            this.Text = "1";
             this.Load += new System.EventHandler(this.frmShipping_Load);
             this.GroupBox1.ResumeLayout(false);
             this.GroupBox1.PerformLayout();

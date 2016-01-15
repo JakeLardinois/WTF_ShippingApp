@@ -347,6 +347,7 @@
             // 
             // frmPrintLabel
             // 
+            this.AcceptButton = this.btnPrint;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(406, 491);
@@ -371,12 +372,14 @@
             this.Controls.Add(this.Label8);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmPrintLabel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Print Label";
             this.Load += new System.EventHandler(this.frmPrintLabel_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmPrintLabel_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.udCopies)).EndInit();
             this.grpMultiple.ResumeLayout(false);
             this.grpMultiple.PerformLayout();
