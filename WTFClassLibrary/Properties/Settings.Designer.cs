@@ -27,7 +27,7 @@ namespace WTFClassLibrary.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ERPSQLSVR;Initial Catalog=WTF_App;Persist Security Info=True;User ID=" +
-            "WTFApp;Password=***REMOVED***")]
+            "WTFApp;Password=W+fapp*")]
         public string WTF_AppConnectionString {
             get {
                 return ((string)(this["WTF_AppConnectionString"]));
@@ -38,7 +38,7 @@ namespace WTFClassLibrary.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ERPSQLSVR;Initial Catalog=ExtraSytelineTables;Persist Security Info=T" +
-            "rue;User ID=WTFApp;Password=***REMOVED***")]
+            "rue;User ID=WTFApp;Password=W+fapp*")]
         public string ExtraSytelineTablesConnectionString {
             get {
                 return ((string)(this["ExtraSytelineTablesConnectionString"]));
@@ -49,7 +49,7 @@ namespace WTFClassLibrary.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=ERPSQLSVR;Initial Catalog=ExtraSytelineTables;Persist Security Info=T" +
-            "rue;User ID=sa;Password=***REMOVED***")]
+            "rue;User ID=sa;Password=!WtFeRp*")]
         public string ExtraSytelineTablesConnectionString1 {
             get {
                 return ((string)(this["ExtraSytelineTablesConnectionString1"]));
