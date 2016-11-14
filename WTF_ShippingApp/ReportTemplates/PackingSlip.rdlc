@@ -253,7 +253,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.25in</Height>
+              <Height>0.57292in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -265,7 +265,20 @@
                             <TextRun>
                               <Value>=First(Fields!CustomerPO.Value, "OrderLines")</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>12pt</FontSize>
+                              </Style>
+                            </TextRun>
+                            <TextRun>
+                              <Value xml:space="preserve">    </Value>
+                              <Style>
+                                <FontSize>12pt</FontSize>
+                              </Style>
+                            </TextRun>
+                            <TextRun>
+                              <Value>=First(Fields!CustomerPO.Value, "OrderLines")</Value>
+                              <Style>
+                                <FontFamily>Code 128</FontFamily>
+                                <FontSize>24pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -911,7 +924,7 @@ BACK-ORD</Value>
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.21in</Height>
+              <Height>0.72125in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -1021,16 +1034,30 @@ BACK-ORD</Value>
                             <TextAlign>Left</TextAlign>
                           </Style>
                         </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!ItemID.Value</Value>
+                              <Style>
+                                <FontFamily>Code 128</FontFamily>
+                                <FontSize>24pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
+                        </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>textbox74</rd:DefaultName>
                       <ZIndex>67</ZIndex>
                       <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
                         <TopBorder>
                           <Style>Solid</Style>
                         </TopBorder>
-                        <BottomBorder>
-                          <Style>None</Style>
-                        </BottomBorder>
                         <LeftBorder>
                           <Style>Solid</Style>
                         </LeftBorder>
@@ -1049,35 +1076,42 @@ BACK-ORD</Value>
                 <TablixCell />
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="textbox11">
+                    <Textbox Name="ItemDescription">
+                      <CanShrink>true</CanShrink>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
-                              <Style />
+                              <Value>=Fields!ItemDescription.Value &amp; System.Environment.NewLine &amp; Parameters!ActualShipDate.Value</Value>
+                              <Style>
+                                <FontSize>9pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Left</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>textbox11</rd:DefaultName>
-                      <ZIndex>66</ZIndex>
+                      <rd:DefaultName>ItemDescription</rd:DefaultName>
+                      <ZIndex>58</ZIndex>
                       <Style>
                         <TopBorder>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                         </TopBorder>
                         <BottomBorder>
                           <Color>White</Color>
                           <Style>None</Style>
                         </BottomBorder>
                         <LeftBorder>
-                          <Style>None</Style>
+                          <Color>Black</Color>
+                          <Style>Solid</Style>
                         </LeftBorder>
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
+                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -1134,7 +1168,22 @@ BACK-ORD</Value>
                             <TextRun>
                               <Value>= Format(Fields!QtyOrdered.Value, "###0.##")</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>12pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!QtyOrdered.Value</Value>
+                              <MarkupType>HTML</MarkupType>
+                              <Style>
+                                <FontFamily>Code 128</FontFamily>
+                                <FontSize>24pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1169,7 +1218,23 @@ BACK-ORD</Value>
                           <TextRuns>
                             <TextRun>
                               <Value>= Iif(Fields!QtyShipped.Value = 0, "" ,Format(Fields!QtyShipped.Value, "###0.##"))</Value>
-                              <Style />
+                              <Style>
+                                <FontSize>12pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!QtyShipped.Value</Value>
+                              <Style>
+                                <FontFamily>Code 128</FontFamily>
+                                <FontSize>24pt</FontSize>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
@@ -1219,6 +1284,18 @@ BACK-ORD</Value>
                           </TextRuns>
                           <Style />
                         </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!QtyBackOrdered.Value</Value>
+                              <Style>
+                                <FontFamily>Code 128</FontFamily>
+                                <FontSize>24pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>textbox81</rd:DefaultName>
                       <ZIndex>62</ZIndex>
@@ -1247,7 +1324,7 @@ BACK-ORD</Value>
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.2in</Height>
+              <Height>0.45in</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -1383,42 +1460,35 @@ BACK-ORD</Value>
                 <TablixCell />
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="ItemDescription">
-                      <CanShrink>true</CanShrink>
+                    <Textbox Name="textbox11">
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ItemDescription.Value &amp; System.Environment.NewLine &amp; Parameters!ActualShipDate.Value</Value>
-                              <Style>
-                                <FontSize>9pt</FontSize>
-                              </Style>
+                              <Value />
+                              <Style />
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Left</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>ItemDescription</rd:DefaultName>
-                      <ZIndex>58</ZIndex>
+                      <rd:DefaultName>textbox11</rd:DefaultName>
+                      <ZIndex>66</ZIndex>
                       <Style>
                         <TopBorder>
-                          <Style>None</Style>
+                          <Style>Solid</Style>
                         </TopBorder>
                         <BottomBorder>
                           <Color>White</Color>
                           <Style>None</Style>
                         </BottomBorder>
                         <LeftBorder>
-                          <Color>Black</Color>
-                          <Style>Solid</Style>
+                          <Style>None</Style>
                         </LeftBorder>
                         <RightBorder>
                           <Style>Solid</Style>
                         </RightBorder>
-                        <VerticalAlign>Middle</VerticalAlign>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -3551,17 +3621,17 @@ BACK-ORD</Value>
         <PageBreak>
           <BreakLocation>End</BreakLocation>
         </PageBreak>
-        <Height>3.34042in</Height>
+        <Height>4.42459in</Height>
         <Width>7.96in</Width>
         <Style>
           <FontSize>8pt</FontSize>
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>3.58in</Height>
+    <Height>4.42459in</Height>
     <Style />
   </Body>
-  <Width>7.9625in</Width>
+  <Width>7.97806in</Width>
   <Page>
     <PageHeader>
       <Height>2.32in</Height>
@@ -3680,16 +3750,19 @@ TO:</Value>
                   </Style>
                 </TextRun>
               </TextRuns>
-              <Style />
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>textbox5</rd:DefaultName>
           <Top>0.2in</Top>
           <Left>5.88in</Left>
-          <Height>0.23958in</Height>
+          <Height>0.40667in</Height>
           <Width>0.84in</Width>
           <ZIndex>4</ZIndex>
           <Style>
+            <VerticalAlign>Middle</VerticalAlign>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
             <PaddingTop>2pt</PaddingTop>
@@ -3713,11 +3786,25 @@ TO:</Value>
                 <TextAlign>Left</TextAlign>
               </Style>
             </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Parameters!CustomerOrderNumber.Value &amp; "-" &amp; Parameters!CustomerOrderSuffix.Value</Value>
+                  <Style>
+                    <FontFamily>Code 128</FontFamily>
+                    <FontSize>20pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Left</TextAlign>
+              </Style>
+            </Paragraph>
           </Paragraphs>
           <rd:DefaultName>textbox18</rd:DefaultName>
           <Top>0.2in</Top>
-          <Left>6.76in</Left>
-          <Height>0.24in</Height>
+          <Left>6.77556in</Left>
+          <Height>0.40667in</Height>
           <Width>1.2025in</Width>
           <ZIndex>5</ZIndex>
           <Style>
@@ -3948,6 +4035,13 @@ TO:</Value>
                     <FontSize>9pt</FontSize>
                   </Style>
                 </TextRun>
+                <TextRun>
+                  <Value>=Parameters!JobNumber.Value</Value>
+                  <Style>
+                    <FontFamily>Code 128</FontFamily>
+                    <FontSize>24pt</FontSize>
+                  </Style>
+                </TextRun>
               </TextRuns>
               <Style>
                 <TextAlign>Left</TextAlign>
@@ -3955,9 +4049,9 @@ TO:</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>textbox18</rd:DefaultName>
-          <Top>0.48167in</Top>
-          <Left>6.7575in</Left>
-          <Height>0.24in</Height>
+          <Top>0.67611in</Top>
+          <Left>5.70903in</Left>
+          <Height>0.53444in</Height>
           <Width>1.2025in</Width>
           <ZIndex>13</ZIndex>
           <Style>
