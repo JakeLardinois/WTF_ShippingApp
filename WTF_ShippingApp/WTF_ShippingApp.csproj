@@ -436,6 +436,10 @@
     <None Include="WTF_ShippingApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\GenCode128\GenCode128.csproj">
+      <Project>{32817bf9-e380-4467-9c7f-936f4b122bc7}</Project>
+      <Name>GenCode128</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WTFClassLibrary\WTFClassLibrary.csproj">
       <Project>{3C41077F-AA5E-44F3-8D90-98B5865F608A}</Project>
       <Name>WTFClassLibrary</Name>
