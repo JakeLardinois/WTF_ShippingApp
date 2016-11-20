@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WTF_ShippingApp", "WTF_Ship
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WTFClassLibrary", "WTFClassLibrary\WTFClassLibrary.csproj", "{3C41077F-AA5E-44F3-8D90-98B5865F608A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenCode128", "GenCode128\GenCode128.csproj", "{32817BF9-E380-4467-9C7F-936F4B122BC7}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,18 +37,6 @@ Global
 		{3C41077F-AA5E-44F3-8D90-98B5865F608A}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{3C41077F-AA5E-44F3-8D90-98B5865F608A}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{3C41077F-AA5E-44F3-8D90-98B5865F608A}.Release|x86.ActiveCfg = Release|Any CPU
-		{32817BF9-E380-4467-9C7F-936F4B122BC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{32817BF9-E380-4467-9C7F-936F4B122BC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{32817BF9-E380-4467-9C7F-936F4B122BC7}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{32817BF9-E380-4467-9C7F-936F4B122BC7}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{32817BF9-E380-4467-9C7F-936F4B122BC7}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{32817BF9-E380-4467-9C7F-936F4B122BC7}.Debug|x86.Build.0 = Debug|Any CPU
-		{32817BF9-E380-4467-9C7F-936F4B122BC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{32817BF9-E380-4467-9C7F-936F4B122BC7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{32817BF9-E380-4467-9C7F-936F4B122BC7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{32817BF9-E380-4467-9C7F-936F4B122BC7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{32817BF9-E380-4467-9C7F-936F4B122BC7}.Release|x86.ActiveCfg = Release|Any CPU
-		{32817BF9-E380-4467-9C7F-936F4B122BC7}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
