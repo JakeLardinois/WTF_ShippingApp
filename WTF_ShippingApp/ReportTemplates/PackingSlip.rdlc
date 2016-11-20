@@ -268,17 +268,18 @@
                                 <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
                             <TextRun>
-                              <Value xml:space="preserve">    </Value>
+                              <Value>="*" &amp; Replace(UCase(Trim(First(Fields!CustomerPO.Value, "OrderLines")))," ", "_") &amp; "*"</Value>
                               <Style>
-                                <FontSize>12pt</FontSize>
-                              </Style>
-                            </TextRun>
-                            <TextRun>
-                              <Value>=First(Fields!CustomerPO.Value, "OrderLines")</Value>
-                              <Style>
-                                <FontFamily>Code 128</FontFamily>
-                                <FontSize>24pt</FontSize>
+                                <FontFamily>Free 3 of 9</FontFamily>
+                                <FontSize>19pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1019,6 +1020,7 @@ BACK-ORD</Value>
                 <TablixCell>
                   <CellContents>
                     <Textbox Name="textbox74">
+                      <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
@@ -1031,21 +1033,21 @@ BACK-ORD</Value>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ItemID.Value</Value>
+                              <Value>="*" &amp; Replace(UCase(Trim(Fields!ItemID.Value))," ", "_") &amp; "*"</Value>
                               <Style>
-                                <FontFamily>Code 128</FontFamily>
-                                <FontSize>24pt</FontSize>
+                                <FontFamily>Free 3 of 9</FontFamily>
+                                <FontSize>19pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
                           <Style>
-                            <TextAlign>Left</TextAlign>
+                            <TextAlign>Center</TextAlign>
                           </Style>
                         </Paragraph>
                       </Paragraphs>
@@ -1179,11 +1181,13 @@ BACK-ORD</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!QtyOrdered.Value</Value>
+                              <Value>= IIf( not IsNothing(Fields!QtyOrdered.Value),
+	IIf( Len(Trim(Fields!QtyOrdered.Value)) &lt; 3, "*" &amp; RIGHT("000" &amp; Trim(Fields!QtyOrdered.Value), 3) &amp; "*", "*" &amp; Trim(Fields!QtyOrdered.Value) &amp; "*"),
+	"*" &amp; Trim(Fields!QtyOrdered.Value) &amp; "*")</Value>
                               <MarkupType>HTML</MarkupType>
                               <Style>
-                                <FontFamily>Code 128</FontFamily>
-                                <FontSize>24pt</FontSize>
+                                <FontFamily>Free 3 of 9</FontFamily>
+                                <FontSize>19pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1230,10 +1234,12 @@ BACK-ORD</Value>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!QtyShipped.Value</Value>
+                              <Value>= IIf( not IsNothing(Fields!QtyShipped.Value),
+	IIf( Len(Trim(Fields!QtyShipped.Value)) &lt; 3, "*" &amp; RIGHT("000" &amp; Trim(Fields!QtyShipped.Value), 3) &amp; "*", "*" &amp; Trim(Fields!QtyShipped.Value) &amp; "*"),
+	"*" &amp; Trim(Fields!QtyShipped.Value) &amp; "*")</Value>
                               <Style>
-                                <FontFamily>Code 128</FontFamily>
-                                <FontSize>24pt</FontSize>
+                                <FontFamily>Free 3 of 9</FontFamily>
+                                <FontSize>19pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1278,23 +1284,29 @@ BACK-ORD</Value>
                             <TextRun>
                               <Value>= Iif(Fields!QtyBackOrdered.Value = 0, "" ,Format(Fields!QtyBackOrdered.Value, "###0.##"))</Value>
                               <Style>
-                                <FontSize>9pt</FontSize>
+                                <FontSize>12pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!QtyBackOrdered.Value</Value>
+                              <Value>= IIf( not IsNothing(Fields!QtyBackOrdered.Value),
+	IIf( Len(Trim(Fields!QtyBackOrdered.Value)) &lt; 3, "*" &amp; RIGHT("000" &amp; Trim(Fields!QtyBackOrdered.Value), 3) &amp; "*", "*" &amp; Trim(Fields!QtyBackOrdered.Value) &amp; "*"),
+	"*" &amp; Trim(Fields!QtyBackOrdered.Value) &amp; "*")</Value>
                               <Style>
-                                <FontFamily>Code 128</FontFamily>
-                                <FontSize>24pt</FontSize>
+                                <FontFamily>Free 3 of 9</FontFamily>
+                                <FontSize>19pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style />
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>textbox81</rd:DefaultName>
@@ -3758,7 +3770,7 @@ TO:</Value>
           <rd:DefaultName>textbox5</rd:DefaultName>
           <Top>0.2in</Top>
           <Left>5.88in</Left>
-          <Height>0.40667in</Height>
+          <Height>0.18792in</Height>
           <Width>0.84in</Width>
           <ZIndex>4</ZIndex>
           <Style>
@@ -3786,25 +3798,11 @@ TO:</Value>
                 <TextAlign>Left</TextAlign>
               </Style>
             </Paragraph>
-            <Paragraph>
-              <TextRuns>
-                <TextRun>
-                  <Value>=Parameters!CustomerOrderNumber.Value &amp; "-" &amp; Parameters!CustomerOrderSuffix.Value</Value>
-                  <Style>
-                    <FontFamily>Code 128</FontFamily>
-                    <FontSize>20pt</FontSize>
-                  </Style>
-                </TextRun>
-              </TextRuns>
-              <Style>
-                <TextAlign>Left</TextAlign>
-              </Style>
-            </Paragraph>
           </Paragraphs>
           <rd:DefaultName>textbox18</rd:DefaultName>
           <Top>0.2in</Top>
           <Left>6.77556in</Left>
-          <Height>0.40667in</Height>
+          <Height>0.18792in</Height>
           <Width>1.2025in</Width>
           <ZIndex>5</ZIndex>
           <Style>
@@ -4035,13 +4033,6 @@ TO:</Value>
                     <FontSize>9pt</FontSize>
                   </Style>
                 </TextRun>
-                <TextRun>
-                  <Value>=Parameters!JobNumber.Value</Value>
-                  <Style>
-                    <FontFamily>Code 128</FontFamily>
-                    <FontSize>24pt</FontSize>
-                  </Style>
-                </TextRun>
               </TextRuns>
               <Style>
                 <TextAlign>Left</TextAlign>
@@ -4050,11 +4041,81 @@ TO:</Value>
           </Paragraphs>
           <rd:DefaultName>textbox18</rd:DefaultName>
           <Top>0.67611in</Top>
-          <Left>5.70903in</Left>
-          <Height>0.53444in</Height>
+          <Left>5.42778in</Left>
+          <Height>0.24277in</Height>
           <Width>1.2025in</Width>
           <ZIndex>13</ZIndex>
           <Style>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox97">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>="*" &amp; Replace(UCase(Trim(Parameters!JobNumber.Value))," ", "_") &amp; "*"</Value>
+                  <Style>
+                    <FontFamily>Free 3 of 9</FontFamily>
+                    <FontSize>19pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox97</rd:DefaultName>
+          <Top>0.91888in</Top>
+          <Left>5.08264in</Left>
+          <Height>0.25in</Height>
+          <Width>2.00792in</Width>
+          <ZIndex>14</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox10">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>="*" &amp; Replace(UCase(Trim(Parameters!CustomerOrderNumber.Value &amp; "-" &amp; Parameters!CustomerOrderSuffix.Value))," ", "_") &amp; "*"</Value>
+                  <Style>
+                    <FontFamily>Free 3 of 9</FontFamily>
+                    <FontSize>19pt</FontSize>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style>
+                <TextAlign>Center</TextAlign>
+              </Style>
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox10</rd:DefaultName>
+          <Top>0.4157in</Top>
+          <Left>5.88in</Left>
+          <Height>0.21875in</Height>
+          <Width>2.08in</Width>
+          <ZIndex>15</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
             <PaddingTop>2pt</PaddingTop>
@@ -4093,6 +4154,7 @@ WITHOUT OUR AUTHORIZIATION.</Value>
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>textbox25</rd:DefaultName>
+          <Top>0in</Top>
           <Height>0.48in</Height>
           <Width>7.9625in</Width>
           <Style>
